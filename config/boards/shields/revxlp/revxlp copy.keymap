@@ -13,25 +13,94 @@
 #define NUM_L 2
 #define MED_L 3
 #define FUN_L 4
-#define ENGRAM_BASE 1
 
 / {
+    tap_dances {
+    	shifty: shift_caps_word {
+		compatible = "zmk,behavior-tap-dance";
+		label = "TD_SHIFTY";
+		#binding-cells = <0>;
+		tapping-term-ms = <150>;
+		bindings = <&kp LSHFT>, <&caps_word>;
+	};
+    };
 
+    cond_layers {
+        compatible = "zmk,conditional-layers";
+	tri {
+	    if-layers = <NUM_L NAV_L>;
+	    then-layer = <MED_L>;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
 
+	l_curly_bracket {
+	    timeout-ms = <50>;
+            key-positions = <2 14>;
+            bindings = <&kp LS(LBKT)>;
+	    layers = <NUM_L>;
+	};
 
+	r_curly_bracket {
+	    timeout-ms = <50>;
+            key-positions = <4 16>;
+            bindings = <&kp LS(RBKT)>;
+	    layers = <NUM_L>;
+	};
+	lbracket {
+	    timeout-ms = <50>;
+            key-positions = <14 26>;
+            bindings = <&kp LBKT>;
+	    layers = <NUM_L>;
+	};
+
+	rbracket {
+	    timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&kp RBKT>;
+	    layers = <NUM_L>;
+	};
+
+	ques_mark_combo {
+	    timeout-ms = <50>;
+            key-positions = <21 33>;
+            bindings = <&kp LS(FSLH)>;
+	};
+
+	bslash_combo {
+	    timeout-ms = <50>;
+            key-positions = <10 22>;
+            bindings = <&kp BSLH>;
+	};
+
+	fslash_combo {
+	    timeout-ms = <50>;
+            key-positions = <22 34>;
+            bindings = <&kp FSLH>;
+	};
+
+	bootloader_combo {
+	    timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&bootloader>;
+	    layers = <MED_L>;
+	};
+
+    };
 
 
         keymap {
                 compatible = "zmk,keymap";
 
-#ifdef ENGRAM_BASE
+#ifdef QWERTY_BASE
         qwerty_layer {
             label = "Qwerty";
             bindings = <
-       &kp TAB          &kp B      &kp Y      &kp O       &kp U          &kp SQT         &kp DQT            &kp L          &kp D       &kp W      &kp V     &kp Z
-       &kp POUND        &kp C      &kp I      &kp E       &kp A          &kp COMMA       &kp DOT            &kp H          &kp T       &kp S      &kp N     &kp Q
-       &kp AT           &kp G      &kp X      &kp J       &kp K          &kp MINUS       &kp QMARK          &kp R          &kp M       &kp F      &kp P     &kp FSLH
-                                            &kp LALT  &kp LGUI   &kp LCTRL      &mt LSHFT RETURN &kp SPACE   &kp BSPC
+       &none        &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P    &none
+       &none        &kp A      &kp S      &kp D       &kp F          &kp G         &kp H            &kp J          &kp K       &kp L      &kp QUOT &none
+       &none        &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp SEMI &none
+                                          &none   &mo NAV_L      &shifty      &kp SPACE  &mo NUM_L &none
             >;
         };
 #else
