@@ -146,10 +146,10 @@
         nav_layer {
             label = "Nav";
             bindings = <
-       &trans         &trans     &trans     &trans      &trans          &trans       &trans       &trans        &trans      &kp BKSP   &kp DEL    &none
-       &trans         &trans     &trans     &trans      &trans          &trans       &trans       &kp LARW      &kp DARW    &kp UARW   &kp RARW   &none
-       &trans         &trans     &trans     &trans      &trans          &trans       &trans       &kp HOME      &kp PG_DN   &kp PG_UP  &kp END    &none
-                                           &trans  &trans          &trans       &trans       &trans    &trans
+       &trans         &trans     &trans     &trans      &trans         &kp LPAR       &kp RPAR        &kp PLUS        &kp MINUS      &kp BKSP   &kp DEL    &none
+       &trans         &trans     &trans     &trans      &trans         &kp EQUAL       &kp GT      &kp LARW      &kp DARW    &kp UARW   &kp RARW   &none
+       &trans         &trans     &trans     &trans      &trans          &kp LBRC       &kp RBRC       &kp HOME      &kp PG_DN   &kp PG_UP  &kp END    &none
+                                           &trans  &trans               &kp LBKT       &kp RBKT       &trans    &trans
             >;
         };
 
@@ -157,8 +157,8 @@
             label = "Num";
             bindings = <
        &kp F1       &kp F2      &kp F3      &kp F4          &kp F5       &kp F6        &kp F7         &kp F8    &kp F9     &kp F10     &kp F11    &kp F12
-       &kp LBKT     &kp KP_N1   &kp KP_N2   &kp KP_N3      &kp KP_N4     &kp KP_N5     &kp KP_N6  &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_N0  &kp RBKT
        &kp LBRC     &kp PIPE    &kp EQUAL   &kp TILDE      &kp PLUS      &kp LT        &kp GT     &kp CARET     &kp AMPS   &kp PRCNT   &kp STAR   &kp RBRC
+       &kp LBKT     &kp KP_N1   &kp KP_N2   &kp KP_N3      &kp KP_N4     &kp KP_N5     &kp KP_N6  &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_N0  &kp RBKT
                                           &kp LCTRL   &kp LGUI          &none        &none        &trans &trans
             >;
         };
