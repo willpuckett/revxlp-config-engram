@@ -16,20 +16,82 @@
 #define FUN_L 4
 #define ENGRAM_BASE 1
 
+#define KEYS_L 0 1 2 3 4  5  12 13 14 15 16 17 24 25 26 27 28 29   // left-hand keys
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35   // right-hand keys
+#define THUMBS 36 37 38 39 40 41
+
 
 
 / {
   behaviors {
-
-    gqt: global-quick-tap {
+    phtl: positional_hold_tap_left {
         compatible = "zmk,behavior-hold-tap";
-        label = "GLOBAL_QUICK_TAP";
+        label = "POSITIONAL_HOLD_TAP_LEFT";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < KEYS_R THUMBS>;    // <---[[the W key]]
+        };
+
+    sphtl: shift_positional_hold_tap_left {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SHIFT_POSITIONAL_HOLD_TAP_LEFT";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < KEYS_R THUMBS>;    // <---[[the W key]]
+        };
+
+    phtr: positional_hold_tap_right {
+        compatible = "zmk,behavior-hold-tap";
+        label = "POSITIONAL_HOLD_TAP_RIGHT";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < KEYS_L THUMBS>;    // <---[[the W key]]
+        };
+
+    sphtr: shift_positional_hold_tap_right {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SHIFT_POSITIONAL_HOLD_TAP_RIGHT";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < KEYS_L THUMBS>;    // <---[[the W key]]
+        };
+
+    gqtl: left_hand_positional_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "GLOBAL_QUICK_TAP_LEFT";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <200>;
         quick-tap-ms = <125>;
         global-quick-tap;
         bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < KEYS_R THUMBS>;
+        hold-trigger-on-release;             
+        };
+
+    gqtr: right_hand_positional_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "GLOBAL_QUICK_TAP_RIGHT";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <125>;
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < KEYS_L THUMBS>;
+        hold-trigger-on-release;             
         };
 
     mqt: momentary-quick-tap {
@@ -126,7 +188,7 @@
             label = "Engram";
             bindings = <
        &kp TAB      &kp B        &kp Y       &kp O       &kp U          &sqt_lpar   &dqt_rpar       &kp L          &kp D       &kp W       &kp V         &kp Z
-       &hash_buck   &gqt LCTRL C &gqt LALT I &gqt LGUI E &gqt LSHFT A   &cma_semi   &stop_colon     &gqt RSHFT H   &gqt RGUI T &gqt RALT S &gqt RCTRL N  &kp Q
+       &hash_buck   &phtl LCTRL C &phtl LALT I &phtl LGUI E &sphtl LSHFT A   &cma_semi   &stop_colon     &sphtr RSHFT H   &phtr RGUI T &phtr RALT S &phtr RCTRL N  &kp Q
        &at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
                                              &mqt NAV_L ESC &kp BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
