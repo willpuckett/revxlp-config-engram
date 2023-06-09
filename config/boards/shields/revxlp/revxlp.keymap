@@ -33,17 +33,20 @@
         quick-tap-ms = <100>;
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = < KEYS_R THUMBS>;    // <---[[the W key]]
+        hold-trigger-on-release; 
         };
 
     sphtl: shift_positional_hold_tap_left {
         compatible = "zmk,behavior-hold-tap";
         label = "SHIFT_POSITIONAL_HOLD_TAP_LEFT";
         #binding-cells = <2>;
-        flavor = "balanced";
+        flavor = "tap-preferred";
         tapping-term-ms = <200>;
-        quick-tap-ms = <100>;
+        quick-tap-ms = <50>;
+        global-quick-tap;
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = < KEYS_R THUMBS>;    // <---[[the W key]]
+        hold-trigger-on-release; 
         };
 
     phtr: positional_hold_tap_right {
@@ -55,17 +58,20 @@
         quick-tap-ms = <100>;
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = < KEYS_L THUMBS>;    // <---[[the W key]]
+        hold-trigger-on-release; 
         };
 
     sphtr: shift_positional_hold_tap_right {
         compatible = "zmk,behavior-hold-tap";
         label = "SHIFT_POSITIONAL_HOLD_TAP_RIGHT";
         #binding-cells = <2>;
-        flavor = "balanced";
+        flavor = "tap-preferred";
         tapping-term-ms = <200>;
-        quick-tap-ms = <100>;
+        quick-tap-ms = <50>;
+        global-quick-tap;
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = < KEYS_L THUMBS>;    // <---[[the W key]]
+        hold-trigger-on-release; 
         };
 
     gqtl: left_hand_positional_hold_tap {
