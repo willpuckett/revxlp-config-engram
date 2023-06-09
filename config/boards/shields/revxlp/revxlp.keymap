@@ -20,84 +20,55 @@
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35   // right-hand keys
 #define THUMBS 36 37 38 39 40 41
 
-
+#define HM_TAPPING_TERM 1000
+#define HM_TAPPING_TERM_FAST 200
+#define HM_TAPPING_TERM_QT 175
 
 / {
   behaviors {
-    phtl: positional_hold_tap_left {
+
+    hrml: home_row_mod_left {
         compatible = "zmk,behavior-hold-tap";
-        label = "POSITIONAL_HOLD_TAP_LEFT";
+        label = "HOME_ROW_MOD_LEFT";
         #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <100>;
+        flavor = "balanced";
+        tapping-term-ms = <HM_TAPPING_TERM>;
+        hold-trigger-key-positions = < KEYS_R THUMBS >;
+        hold-trigger-on-release;
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = < KEYS_R THUMBS>;    // <---[[the W key]]
-        hold-trigger-on-release; 
         };
 
-    sphtl: shift_positional_hold_tap_left {
+    hrmr: home_row_mod_right {
         compatible = "zmk,behavior-hold-tap";
-        label = "SHIFT_POSITIONAL_HOLD_TAP_LEFT";
+        label = "HOME_ROW_MOD_RIGHT";
         #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <50>;
-        global-quick-tap;
+        flavor = "balanced";
+        tapping-term-ms = <HM_TAPPING_TERM>;
+        hold-trigger-key-positions = < KEYS_L THUMBS >;
+        hold-trigger-on-release;
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = < KEYS_R THUMBS>;    // <---[[the W key]]
-        hold-trigger-on-release; 
         };
 
-    phtr: positional_hold_tap_right {
+    hrmls: home_row_mod_left_shift {
         compatible = "zmk,behavior-hold-tap";
-        label = "POSITIONAL_HOLD_TAP_RIGHT";
+        label = "HOME_ROW_MOD_LEFT_SHIFT";
         #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <100>;
+        flavor = "balanced";
+        tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+        quick_tap_ms = <HM_TAPPING_TERM_QT>;
+        hold-trigger-key-positions = < KEYS_R THUMBS >;
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = < KEYS_L THUMBS>;    // <---[[the W key]]
-        hold-trigger-on-release; 
         };
 
-    sphtr: shift_positional_hold_tap_right {
+    hrmrs: home_row_mod_right_shift {
         compatible = "zmk,behavior-hold-tap";
-        label = "SHIFT_POSITIONAL_HOLD_TAP_RIGHT";
+        label = "HOME_ROW_MOD_RIGHT_SHIFT";
         #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <50>;
-        global-quick-tap;
+        flavor = "balanced";
+        tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+        quick_tap_ms = <HM_TAPPING_TERM_QT>;
+        hold-trigger-key-positions = < KEYS_L THUMBS >;
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = < KEYS_L THUMBS>;    // <---[[the W key]]
-        hold-trigger-on-release; 
-        };
-
-    gqtl: left_hand_positional_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "GLOBAL_QUICK_TAP_LEFT";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = < KEYS_R THUMBS>;
-        hold-trigger-on-release;             
-        };
-
-    gqtr: right_hand_positional_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "GLOBAL_QUICK_TAP_RIGHT";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = < KEYS_L THUMBS>;
-        hold-trigger-on-release;             
         };
 
     mqt: momentary-quick-tap {
@@ -194,7 +165,7 @@
             label = "Engram";
             bindings = <
        &kp TAB      &kp B        &kp Y       &kp O       &kp U          &sqt_lpar   &dqt_rpar       &kp L          &kp D       &kp W       &kp V         &kp Z
-       &hash_buck   &phtl LCTRL C &phtl LALT I &phtl LGUI E &sphtl LSHFT A   &cma_semi   &stop_colon     &sphtr RSHFT H   &phtr RGUI T &phtr RALT S &phtr RCTRL N  &kp Q
+       &hash_buck   &hrml LCTRL C &hrml LALT I &hrml LGUI E &hrmls LSHFT A   &cma_semi   &stop_colon     &hrmrs RSHFT H   &hrmr RGUI T &hrmr RALT S &hrmr RCTRL N  &kp Q
        &at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
                                              &mqt NAV_L ESC &kp BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
