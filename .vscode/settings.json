@@ -1,3 +1,9 @@
 {
-    "GitHooks.hooksDirectory": "/Users/puck/Public/revxlp-config-engram/.git/hooks"
+    "terminal.integrated.cwd": "~/.local/zmk/app",
+    "terminal.integrated.env.osx": {
+        "ZEPHYR_TOOLCHAIN_VARIANT": "zephyr"
+    },
+    "terminal.integrated.env.linux": {
+        "ZEPHYR_TOOLCHAIN_VARIANT": "zephyr"
+    },
 }
