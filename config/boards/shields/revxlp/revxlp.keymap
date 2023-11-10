@@ -12,9 +12,10 @@
 
 #define NAV_L 1
 #define NUM_L 2
-#define MED_L 3
-#define FUN_L 4
-#define ENGRAM_BASE 1
+#define KP_L 3
+#define MED_L 4
+#define FUN_L 5
+#define ENGRAMMER_BASE 1
 
 #define KEYS_L 0 1 2 3 4  5  12 13 14 15 16 17 24 25 26 27 28 29   // left-hand keys
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35   // right-hand keys
@@ -80,6 +81,14 @@
         quick-tap-ms = <125>;
         global-quick-tap;
         bindings = <&mo>, <&kp>;
+        };
+
+    cwh: tap_dance_mod_tap {
+        compatible = "zmk,behavior-tap-dance";
+        label = "CAPS-WORD-DOUBLE_TAP";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&hrmrs RSHFT H>, <&caps_word>;
         };
 
     sqt_lpar: single-quote-left-paren {
@@ -170,6 +179,16 @@
                                              &mqt NAV_L ESC &kp BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
         };
+#elif ENGRAMMER_BASE
+        engrammer_layer {
+            label = "Engram";
+            bindings = <
+       &kp TAB      &kp B        &kp Y       &kp O       &kp U          &kp SQT   &kp SEMI       &kp L          &kp D       &kp W       &kp V         &kp Z
+       &mqt NAV_L EQUAL &hrml LCTRL C &hrml LALT I &hrml LGUI E &hrmls LSHFT A   &kp COMMA   &kp DOT    &cwh   &hrmr RGUI T &hrmr RALT S &hrmr RCTRL N  &kp Q
+       &kp BSLH    &kp G        &kp X       &kp J       &kp K          &kp MINUS   &kp SLASH     &kp R          &kp M       &kp F       &kp P         &kp GRAVE
+                                             &mqt KP_L ESC &kp BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
+            >;
+        };
 #else
         colemak_dhm_layer {
             label = "Base";
@@ -185,20 +204,43 @@
         nav_layer {
             label = "Nav";
             bindings = <
-       &trans         &trans     &trans     &trans      &trans         &kp LPAR       &kp RPAR        &kp PLUS        &kp MINUS      &kp BKSP   &kp DEL    &none
-       &trans         &trans     &trans     &trans      &trans         &kp EQUAL       &kp GT      &kp LARW      &kp DARW    &kp UARW   &kp RARW   &none
-       &trans         &trans     &trans     &trans      &trans          &kp LBRC       &kp RBRC       &kp HOME      &kp PG_DN   &kp PG_UP  &kp END    &none
-                                           &trans  &trans               &kp LBKT       &kp RBKT       &trans    &trans
+       &trans         &trans     &trans     &trans      &trans         &trans          &trans         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
+       &trans         &trans     &trans     &trans      &trans         &trans          &trans      &kp LARW      &kp DARW    &kp UARW   &kp RARW   &none
+       &trans         &trans     &trans     &trans      &trans         &trans          &trans        &kp K_UNDO      &kp K_CUT   &kp K_COPY  &kp K_PASTE    &none
+                                           &trans       &trans         &trans         &trans      &trans    &trans
             >;
         };
 
+#ifdef ENGRAM_BASE
         num_layer {
             label = "Num";
             bindings = <
        &kp F1       &kp F2      &kp F3      &kp F4          &kp F5       &kp F6        &kp F7         &kp F8    &kp F9     &kp F10     &kp F11    &kp F12
        &kp LBRC     &kp PIPE    &kp EQUAL   &kp TILDE      &kp PLUS      &kp LT        &kp GT     &kp CARET     &kp AMPS   &kp PRCNT   &kp STAR   &kp RBRC
        &kp LBKT     &kp KP_N1   &kp KP_N2   &kp KP_N3      &kp KP_N4     &kp KP_N5     &kp KP_N6  &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_N0  &kp RBKT
-                                          &kp LGUI   &trans          &none        &none        &trans &trans
+                                          &trans   &trans          &trans        &trans       &trans &trans
+            >;
+        };
+
+#elif ENGRAMMER_BASE
+        num_layer {
+            label = "Num";
+            bindings = <
+       &kp F1       &kp F2      &kp F3      &kp F4          &kp F5       &kp F6        &kp F7         &kp F8    &kp F9     &kp F10     &kp F11    &kp F12
+       &kp LBRC     &kp EXCL    &kp AT   &kp POUND      &kp DOLLAR      &kp PERCENT    &kp CARET     &kp AMPS  &kp ASTRK   &kp LPAR   &kp RPAR   &kp RBRC
+       &kp LBKT     &kp KP_N1   &kp KP_N2   &kp KP_N3      &kp KP_N4     &kp KP_N5     &kp KP_N6  &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_N0  &kp RBKT
+                                          &trans   &trans          &trans        &trans        &trans &trans
+            >;
+        };
+#endif
+
+        kp_layer {
+            label = "Kp";
+            bindings = <
+       &trans         &trans     &trans     &trans      &trans         &trans   &kp KP_DIVIDE     &kp  KP_N7  &kp KP_N8   &kp KP_N9   &kp KP_MINUS      &none
+       &trans         &trans     &trans     &trans      &trans         &trans &kp KP_MULTIPLY     &kp KP_N4    &kp KP_N5    &kp KP_N6   &kp KP_PLUS      &none
+       &trans         &trans     &trans     &trans      &trans         &trans         &trans     &kp KP_N1   &kp KP_N2   &kp KP_N3  &kp KP_ENTER    &none
+                                           &trans       &trans         &trans         &trans      &kp KP_N0    &kp KP_DOT
             >;
         };
 

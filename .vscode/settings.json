@@ -1,9 +1,5 @@
 {
-    "terminal.integrated.cwd": "~/.local/zmk/app",
-    "terminal.integrated.env.osx": {
-        "ZEPHYR_TOOLCHAIN_VARIANT": "zephyr"
-    },
-    "terminal.integrated.env.linux": {
-        "ZEPHYR_TOOLCHAIN_VARIANT": "zephyr"
-    },
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    
 }
