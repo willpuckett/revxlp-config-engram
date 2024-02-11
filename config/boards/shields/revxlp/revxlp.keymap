@@ -83,12 +83,12 @@
         bindings = <&mo>, <&kp>;
         };
 
-    cwh: tap_dance_mod_tap {
+    cwe: tap_dance_mod_tap {
         compatible = "zmk,behavior-tap-dance";
         label = "CAPS-WORD-DOUBLE_TAP";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&hrmrs RSHFT H>, <&caps_word>;
+        bindings = <&kp ESC>, <&caps_word>;
         };
 
     sqt_lpar: single-quote-left-paren {
@@ -184,9 +184,9 @@
             label = "Engram";
             bindings = <
        &kp TAB      &kp B        &kp Y       &kp O       &kp U          &kp SQT   &kp SEMI       &kp L          &kp D       &kp W       &kp V         &kp Z
-       &mqt NAV_L EQUAL &hrml LCTRL C &hrml LALT I &hrml LGUI E &hrmls LSHFT A   &kp COMMA   &kp DOT    &cwh   &hrmr RGUI T &hrmr RALT S &hrmr RCTRL N  &kp Q
+       &mqt NAV_L EQUAL &hrml LCTRL C &hrml LALT I &hrml LGUI E &hrmls LSHFT A   &kp COMMA   &kp DOT    &hrmrs LSHFT H   &hrmr RGUI T &hrmr RALT S &hrmr RCTRL N  &kp Q
        &kp BSLH    &kp G        &kp X       &kp J       &kp K          &kp MINUS   &kp SLASH     &kp R          &kp M       &kp F       &kp P         &kp GRAVE
-                                             &mqt KP_L ESC &kp BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
+                                        &cwe &mqt KP_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
         };
 #else
@@ -206,7 +206,7 @@
             bindings = <
        &trans         &trans     &trans     &trans      &trans         &trans          &trans         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
        &trans         &trans     &trans     &trans      &trans         &trans          &trans      &kp LARW      &kp DARW    &kp UARW   &kp RARW   &none
-       &trans         &trans     &trans     &trans      &trans         &trans          &trans        &kp K_UNDO      &kp K_CUT   &kp K_COPY  &kp K_PASTE    &none
+       &trans         &trans     &trans     &trans      &trans         &trans          &kp LG(LS(Z))        &kp LG(Z)      &kp LG(X)   &kp LG(C)  &kp LG(V)    &none
                                            &trans       &trans         &trans         &trans      &trans    &trans
             >;
         };
