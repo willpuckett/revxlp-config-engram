@@ -223,7 +223,7 @@
             bindings = <
        &trans   &kp EXCL   &kp AT     &kp LBKT    &kp RBKT           &trans         &trans         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
        &trans   &hrml LCTRL LPAR &hrml LALT RPAR &hrml LGUI LBRC &hrmls LSHFT RBRC  &af      &trans      &hrmrs LSHFT LARW   &hrmr RGUI DARW &hrmr RALT UARW &hrmr RCTRL RARW  &none
-       &trans   &kp LT     &kp SLASH     &kp EQUAL      &kp GT             &trans         &kp K_AGAIN        &kp K_UNDO      &kp K_CUT   &kp K_COPY  &kp K_PASTE    &none
+       &trans   &kp LT     &kp SLASH     &kp EQUAL      &kp GT             &trans         &kp LS(LG(Z))        &kp LG(Z)      &kp LG(X)   &kp LG(C)  &kp LG(V)     &none
                                    &trans       &trans             &trans         &trans      &trans    &trans
             >;
         };
