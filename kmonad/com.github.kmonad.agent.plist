@@ -1,0 +1,24 @@
+<!-- From /Library/LaunchDaemons/ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<false/>
+	<key>Label</key>
+	<string>kmonad</string>
+	<key>Program</key>
+	<string>/Users/you/.local/bin/kmonad</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/you/.local/bin/kmonad</string>
+		<string>/Users/you/.local/config/engrammer.kbd</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/kmonad.stderr</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/kmonad.stdout</string>
+</dict>
+</plist>
