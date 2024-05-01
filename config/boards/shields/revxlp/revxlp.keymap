@@ -256,8 +256,8 @@
         kp_layer {
             label = "Kp";
             bindings = <
-       &trans         &BT_NXT     &trans     &trans      &trans         &trans   &kp KP_DIVIDE     &kp  KP_N7  &kp KP_N8   &kp KP_N9   &kp KP_MINUS      &none
-       &trans         &BT_CLR    &trans     &trans      &trans         &trans &kp KP_MULTIPLY     &kp KP_N4    &kp KP_N5    &kp KP_N6   &kp KP_PLUS      &none
+       &trans         &bt BT_NXT  &trans     &trans      &trans         &trans   &kp KP_DIVIDE     &kp  KP_N7  &kp KP_N8   &kp KP_N9   &kp KP_MINUS      &none
+       &trans         &bt BT_CLR  &trans     &trans      &trans         &trans &kp KP_MULTIPLY     &kp KP_N4    &kp KP_N5    &kp KP_N6   &kp KP_PLUS      &none
        &trans         &trans     &trans     &trans      &trans         &trans         &trans     &kp KP_N1   &kp KP_N2   &kp KP_N3  &kp KP_ENTER    &none
                                            &trans       &trans         &trans         &trans      &kp KP_N0    &kp KP_DOT
             >;
