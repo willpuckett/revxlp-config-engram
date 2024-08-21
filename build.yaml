@@ -1,3 +1,19 @@
-board: [seeeduino_xiao, seeeduino_xiao_ble]
-shield: [revxlp]
+# board: [seeeduino_xiao, seeeduino_xiao_ble]
+# shield: [revxlp]
+
+include:
+  - board:  seeeduino_xiao_ble
+    shield: revxlp
+    artifact-name: revxlp_qwerty
+
+  - board:  seeeduino_xiao_ble
+    shield: revxlp
+    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DLAYOUT=2
+    artifact-name: revxlp_engram
+
+  - board:  seeeduino_xiao_ble
+    shield: revxlp
+    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DLAYOUT=3
+    artifact-name: revxlp_engrammer
+
 

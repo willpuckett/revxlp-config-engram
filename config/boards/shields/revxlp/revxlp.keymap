@@ -10,13 +10,11 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/outputs.h>
 
-
 #define NAV_L 1
 #define NUM_L 2
 #define KP_L 3
 #define MED_L 4
 #define FUN_L 5
-#define ENGRAMMER_BASE 1
 
 #define KEYS_L 0 1 2 3 4  5  12 13 14 15 16 17 24 25 26 27 28 29   // left-hand keys
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35   // right-hand keys
@@ -176,7 +174,7 @@
     keymap {
             compatible = "zmk,keymap";
 
-#ifdef ENGRAM_BASE
+    #if LAYOUT == ENGRAM
         engram_layer {
             label = "Engram";
             bindings = <
@@ -186,7 +184,7 @@
                                              &mqt NAV_L ESC &kp BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
         };
-#elif ENGRAMMER_BASE
+    #elif LAYOUT == ENGRAMMER
         engrammer_layer {
             label = "Engram";
             bindings = <
@@ -196,17 +194,16 @@
                                         &cwe &mqt KP_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
         };
-#else
-        colemak_dhm_layer {
-            label = "Base";
+    #else
+        qwerty_layer {
             bindings = <
-       &none        &kp Q      &kp W      &kp F       &kp P          &kp B         &kp J            &kp L          &kp U       &kp Y      &kp QUOT &none
-       &none        &kp A      &kp R      &kp S       &kp T          &kp G         &kp M            &kp N          &kp E       &kp I      &kp O    &none
-       &none        &kp Z      &kp X      &kp C       &kp D          &kp V         &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI &none     
-                                          &none       &mo NAV_L      &shifty      &kp SPACE        &mo NUM_L &none
+       &none        &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P    &none
+       &none        &kp A      &kp S      &kp D       &kp F          &kp G         &kp H            &kp J          &kp K       &kp L      &kp QUOT &none
+       &none        &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp SEMI &none
+                                          &none   &mo NAV_L      &shifty      &kp SPACE  &mo NUM_L &none
             >;
         };
-#endif
+    #endif
 
 
 // ;; I used #(sft /) to release the shift from rolls with <
@@ -229,9 +226,7 @@
             >;
         };
 
-
-
-#ifdef ENGRAM_BASE
+    #if LAYOUT == ENGRAM
         num_layer {
             label = "Num";
             bindings = <
@@ -241,8 +236,7 @@
                                           &trans   &trans          &trans        &trans       &trans &trans
             >;
         };
-
-#elif ENGRAMMER_BASE
+    #elif LAYOUT == ENGRAMMER
         num_layer {
             label = "Num";
             bindings = <
@@ -252,7 +246,7 @@
                                           &trans   &trans          &trans        &trans        &trans &trans
             >;
         };
-#endif
+    #endif
 
         kp_layer {
             label = "Kp";
