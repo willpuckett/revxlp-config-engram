@@ -181,7 +181,7 @@
        &kp TAB      &kp B        &kp Y       &kp O       &kp U          &sqt_lpar   &dqt_rpar       &kp L          &kp D       &kp W       &kp V         &kp Z
        &hash_buck   &hrml LCTRL C &hrml LALT I &hrml LGUI E &hrmls LSHFT A   &cma_semi   &stop_colon     &hrmrs RSHFT H   &hrmr RGUI T &hrmr RALT S &hrmr RCTRL N  &kp Q
        &at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
-                                             &mqt NAV_L ESC &kp BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
+                                        &cwe &mqt KP_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
         };
     #elif LAYOUT == ENGRAMMER
@@ -200,7 +200,7 @@
        &none        &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P    &none
        &none        &kp A      &kp S      &kp D       &kp F          &kp G         &kp H            &kp J          &kp K       &kp L      &kp QUOT &none
        &none        &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp SEMI &none
-                                          &none   &mo NAV_L      &shifty      &kp SPACE  &mo NUM_L &none
+                                        &cwe &mqt KP_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &kp SPACE      &kp RETURN       
             >;
         };
     #endif
