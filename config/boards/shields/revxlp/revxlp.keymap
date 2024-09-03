@@ -188,9 +188,9 @@
         engrammer_layer {
             label = "Engram";
             bindings = <
-       &cwe        &kp B        &kp Y       &kp O       &kp U          &kp SQT   &kp SEMI       &kp L          &kp D       &kp W       &kp V         &kp Z
-       &mqt NAV_L EQUAL &hrml LCTRL C &hrml LALT I &hrml LGUI E &hrmls LSHFT A   &kp COMMA   &kp DOT  &hrmrs LSHFT H   &hrmr RGUI T &hrmr RALT S &hrmr RCTRL N  &mqt NAV_L Q
-       &kp BSLH    &kp G        &kp X       &kp J       &kp K          &kp MINUS   &kp SLASH     &kp R          &kp M       &kp F       &kp P         &kp GRAVE
+       &kp GRAVE   &kp B        &kp Y       &kp O       &kp U          &kp SQT   &kp SEMI       &kp L          &kp D       &kp W       &kp V         &kp Z
+       &cwe        &hrml LCTRL C &hrml LALT I &hrml LGUI E &hrmls LSHFT A   &kp COMMA   &kp DOT  &hrmrs LSHFT H   &hrmr RGUI T &hrmr RALT S &hrmr RCTRL N  &kp Q
+       &kp EQUAL    &kp G        &kp X       &kp J       &kp K          &kp MINUS   &kp SLASH     &kp R          &kp M       &kp F       &kp P         &kp BSLH
                                 &mqt KP_L TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &mqt KP_L RETURN       
             >;
         };
