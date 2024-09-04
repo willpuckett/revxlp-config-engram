@@ -194,6 +194,15 @@
                                 &mqt KP_L TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &mqt KP_L RETURN       
             >;
         };
+    #elif LAYOUT == QWERTY_FLIP
+        qwerty_flip_layer {
+            bindings = <
+       &KP GRAVE &kp Q          &kp W        &kp D        &kp F          &kp G       &kp Y &kp J          &kp K        &kp L        &kp SEMI      &kp BSLH
+       &cwe      &hrml LCTRL A  &hrml LALT S &hrml LGUI E &hrmls LSHFT R &kp T       &kp H &hrmrs RSHFT U &hrmr RGUI I &hrmr RALT O &hrmr RCTRL P &kp SQT
+       &kp MINUS &kp Z          &kp X        &kp C        &kp V          &kp B       &kp N &kp M          &kp COMMA    &kp DOT      &kp SLASH     &kp EQUAL
+                                &mqt KP_L TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &mqt KP_L RETURN       
+            >;
+        };
     #else
         qwerty_layer {
             bindings = <

@@ -9,11 +9,16 @@ include:
   - board:  seeeduino_xiao_ble
     shield: revxlp
     cmake-args: -DDTS_EXTRA_CPPFLAGS=-DLAYOUT=2
-    artifact-name: revxlp_engram
+    artifact-name: revxlp_qwerty_flip
 
   - board:  seeeduino_xiao_ble
     shield: revxlp
     cmake-args: -DDTS_EXTRA_CPPFLAGS=-DLAYOUT=3
+    artifact-name: revxlp_engram
+
+  - board:  seeeduino_xiao_ble
+    shield: revxlp
+    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DLAYOUT=4
     artifact-name: revxlp_engrammer
 
 

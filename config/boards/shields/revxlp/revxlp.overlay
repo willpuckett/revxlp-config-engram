@@ -11,8 +11,9 @@
 #endif
 
 #define QWERTY 1
-#define ENGRAM 2
-#define ENGRAMMER 3
+#define QWERTY_FLIP 2
+#define ENGRAM 3
+#define ENGRAMMER 4
 
 &xiao_serial { status = "disabled"; };
 
