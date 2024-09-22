@@ -10,21 +10,21 @@ You can download the firmwares from the latest successful build using [this link
 
 ## Layout Maps
 
-These maps were made with the awesome [ZMK Viewer](https://github.com/MrMarble/zmk-viewer) by MrMarble. They're a little difficult to read, and not all the custom codes show, so check [revxlp.keymap](config/boards/shields/revxlp/revxlp.keymap) for the full layout.
+These maps were made with the awesome [keymap drawer](https://keymap-drawer.streamlit.app) by caksoylar.  
 
 ### QWERTY
 
-![QWERTY](.images/qwerty.png)
+![QWERTY](.images/revxlp_QWERTY.svg)
 
 ### QWERTY-FLIP
 
-![QWERTY-FLIP](.images/q-flip.png)
+![QWERTY-FLIP](.images/revxlp_QWERTY_FLIP.svg)
 
 ### ENGRAM
 
-![ENGRAM](.images/engram.png)
+![ENGRAM](.images/revxlp_ENGRAM.svg)
 
 ### ENGRAMMER
 
-![ENGRAMMER](.images/engrammer.png)
+![ENGRAMMER](.images/revxlp_ENGRAMMER.svg)
 
