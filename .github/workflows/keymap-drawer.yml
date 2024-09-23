@@ -18,8 +18,12 @@ on:
 jobs:
   draw-keymaps:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # allow workflow to commit to the repo
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
     # - uses: pkgxdev/setup@v1
     #   with:
     #     +: python 
