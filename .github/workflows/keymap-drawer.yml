@@ -32,7 +32,7 @@ jobs:
       id: last_commit   
       run: |
         echo "message=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
-        echo "author=$(git log -1 --pretty=\"%an <%ae>\")" >> $GITHUB_OUTPUT
+        echo "author=$(git log -1 --pretty='%an <%ae>')" >> $GITHUB_OUTPUT
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
         file_pattern: '.images/*.svg'
@@ -42,7 +42,7 @@ jobs:
         # - https://github.com/stefanzweifel/git-auto-commit-action/issues/159#issuecomment-845347950
         # - https://github.com/actions/checkout
         commit_author: ${{ steps.last_commit.outputs.author }}
-        commit_message: '${{  steps.last_commit.outputs.msg }}'
+        commit_message: '${{  steps.last_commit.outputs.message }}'
         commit_options: '--amend --no-edit'
         push_options: '--force-with-lease'
         skip_fetch: true 
