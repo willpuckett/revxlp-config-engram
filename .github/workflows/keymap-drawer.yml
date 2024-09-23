@@ -30,7 +30,6 @@ jobs:
     #        pipx
     - run: |
         python3 -m pip install keymap-drawer
-        keymap --help
         .images/draw-keymaps.sh
     - name: get commit info
       id: last_commit   
