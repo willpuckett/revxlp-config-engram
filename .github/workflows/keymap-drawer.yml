@@ -1,11 +1,19 @@
 name: keymap drawer
 
 on:
+  push:
+    paths:
+      - '.images/make_keymaps.sh'
+      - '.github/workflows/keymap-drawer.yml'
+  pull_request:
+    paths:
+      - '.images/make_keymaps.sh'
+      - '.github/workflows/keymap-drawer.yml'
   workflow_run:
     workflows: ["zmk-build"]
     types:
       - completed
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
   draw-keymaps:
@@ -17,9 +25,7 @@ jobs:
         +: pipx
     - run: |
         pipx install keymap-drawer
-        ls -l
-        ls -l .images
-        ./images/make_keymaps.sh
+        .images/draw-keymaps.sh
     - name: get commit info
       id: last_commit   
       run: |
