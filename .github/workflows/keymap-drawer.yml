@@ -20,12 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: pkgxdev/setup@v1
-      with:
-        +: python 
-           pipx
+    # - uses: pkgxdev/setup@v1
+    #   with:
+    #     +: python 
+    #        pipx
     - run: |
-        pipx install keymap-drawer
+        python3 -m pip install keymap-drawer
         keymap --help
         .images/draw-keymaps.sh
     - name: get commit info
