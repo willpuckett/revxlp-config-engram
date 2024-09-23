@@ -22,9 +22,11 @@ jobs:
     - uses: actions/checkout@v4
     - uses: pkgxdev/setup@v1
       with:
-        +: python pipx
+        +: python 
+           pipx
     - run: |
         pipx install keymap-drawer
+        keymap --help
         .images/draw-keymaps.sh
     - name: get commit info
       id: last_commit   
