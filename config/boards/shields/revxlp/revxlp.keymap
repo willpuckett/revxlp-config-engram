@@ -226,8 +226,8 @@
 		nav_layer {
 			label = "Nav";
 			bindings = <
-			&trans   &kp EXCL   &kp AT     &kp LBKT    &kp RBKT         &kp TILDE       &none         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
-			&trans   &hl LCTRL LPAR &hl LALT RPAR &hl LGUI LBRC &hls LSHFT RBRC  &kp PIPE    &none      &hrs LSHFT LARW   &hr RGUI DARW &hr RALT UARW &hr RCTRL RARW  &none
+			&trans   &kp EXCL   &kp AT     &kp LBKT    &kp RBKT         &kp TILDE       &kp PLUS         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
+			&trans   &hl LCTRL LPAR &hl LALT RPAR &hl LGUI LBRC &hls LSHFT RBRC  &kp PIPE    &kp MINUS      &hrs LSHFT LARW   &hr RGUI DARW &hr RALT UARW &hr RCTRL RARW  &none
 			&trans   &kp LT     &kp SLASH     &kp EQUAL      &kp GT             &kp BSLH         &kp LS(LG(Z))        &kp LG(Z)      &kp LG(X)   &kp LG(C)  &kp LG(V)     &none
 			&trans       &trans             &trans         &trans      &trans    &trans
 			>;
