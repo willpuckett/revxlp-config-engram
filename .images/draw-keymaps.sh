@@ -8,5 +8,6 @@ for l in {1..4}; do
     yml=".images/revxlp${l}.yml"
     KEYMAP_zmk_preamble="#define LAYOUT ${l}" keymap parse -z ${keymap} > "${yml}" && \
     keymap draw -n '333333+3 3+333333' "${yml}" > ".images/revxlp_${LAYOUTS[l]}.svg"
+    [[ $? -ne 0 ]]  && exit 1
     rm "${yml}"
 done
