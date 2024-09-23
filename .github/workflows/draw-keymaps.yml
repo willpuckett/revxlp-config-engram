@@ -17,7 +17,8 @@ jobs:
         +: pipx
     - run: |
         pipx install keymap-drawer
-        ls
+        ls -l
+        ls -l .images
         ./images/make_keymaps.sh
     - name: get commit info
       id: last_commit   
