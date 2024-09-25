@@ -6,15 +6,6 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#ifndef LAYOUT
-    #define LAYOUT 1
-#endif
-
-#define QWERTY 1
-#define QWERTY_FLIP 2
-#define ENGRAM 3
-#define ENGRAMMER 4
-
 &xiao_serial { status = "disabled"; };
 
 &xiao_spi {
