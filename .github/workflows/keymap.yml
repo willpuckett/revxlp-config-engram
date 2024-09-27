@@ -57,7 +57,10 @@ jobs:
         # version: '^0.11.0' # You can specify any semver range
     - name: Run svg2pdf
       if: ${{ startsWith(github.ref, 'refs/tags/') }}
-      run: svg2pdf .images/revxlp_*.svg
+      run: |
+        for i in .images/revxlp_*.svg; do
+          svg2pdf "${i}" "${i/%svg/pdf}"
+        done
     - name: Release
       uses: softprops/action-gh-release@v2
       if: ${{ startsWith(github.ref, 'refs/tags/') }}

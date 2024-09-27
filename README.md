@@ -6,7 +6,7 @@
 This repository includes the [engram](https://engram.dev),
 [engrammer](https://github.com/sunaku/engrammer), and
 [qwerty-flip](https://nick-gravgaard.com/qwerty-flip/) layouts for the
-[revxlp](https://kbd.news/revxlp-1787.html). It references the [revxlp shield](https://github.com/petejohanson/revxlp-module) using the [ZMK module system](https://zmk.dev/docs/features/modules).
+[revxlp](https://kbd.news/revxlp-1787.html). The [revxlp shield](https://github.com/petejohanson/revxlp-module) is referenced using the [ZMK module system](https://zmk.dev/docs/features/modules).
 
 > [!TIP]
 > Also included is a (mostly) matching kmonad `.kbd` file for parity on a
@@ -34,7 +34,7 @@ These maps were made with the awesome
 
 </summary>
 
-![QWERTY](.images/revxlp_QWERTY.svg)
+![QWERTY](.images/revxlp_qwerty.svg)
 
 </details>
 
@@ -45,7 +45,7 @@ These maps were made with the awesome
 
 </summary>
 
-![QWERTY-FLIP](.images/revxlp_QWERTY_FLIP.svg)
+![QWERTY-FLIP](.images/revxlp_qwerty_flip.svg)
 
 </details>
 
@@ -56,7 +56,7 @@ These maps were made with the awesome
 
 </summary>
 
-![ENGRAM](.images/revxlp_ENGRAM.svg)
+![ENGRAM](.images/revxlp_engram.svg)
 
 </details>
 
@@ -67,6 +67,6 @@ These maps were made with the awesome
 
 </summary>
 
-![ENGRAMMER](.images/revxlp_ENGRAMMER.svg)
+![ENGRAMMER](.images/revxlp_engrammer.svg)
 
 </details>

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJECT=revxlp
-LAYOUTS=('QWERTY' 'QWERTY_FLIP' 'ENGRAM' 'ENGRAMMER')
+LAYOUTS=('qwerty' 'qwerty_flip' 'engram' 'engrammer')
 COLS=8
 KEYMAP="config/${PROJECT}.keymap"
 # See [this link](https://github.com/caksoylar/keymap-drawer/blob/main/KEYMAP_SPEC.md#colsthumbs-notation-specification)
@@ -18,7 +18,7 @@ KMD_LAYOUT=(-n "$COLS_THUMBS") &&
 
 for l in "${!LAYOUTS[@]}"; do
     echo "Rendering Layout ${LAYOUTS[$l]}"
-    BASE=".images/${PROJECT,,}_${LAYOUTS[$l],,}"
+    BASE=".images/${PROJECT}_${LAYOUTS[$l]}"
     YML="$BASE.yml"
     echo $KMD_LAYOUT
     # note you have to have the quotes for KMD_LAYOUT expansion
