@@ -49,8 +49,17 @@ jobs:
         commit_options: '--amend --no-edit'
         push_options: '--force-with-lease'
         skip_fetch: true 
+    - name: Install svg2pdf-cli from crates.io
+      if: ${{ startsWith(github.ref, 'refs/tags/') }}
+      uses: baptiste0928/cargo-install@v3
+      with:
+        crate: svg2pdf-cli
+        # version: '^0.11.0' # You can specify any semver range
+    - name: Run svg2pdf
+      if: ${{ startsWith(github.ref, 'refs/tags/') }}
+      run: svg2pdf .images/revxlp_*.svg
     - name: Release
       uses: softprops/action-gh-release@v2
       if: ${{ startsWith(github.ref, 'refs/tags/') }}
       with:
-        files: ".images/revxlp_*.svg"
+        files: ".images/revxlp_*.pdf"

@@ -18,7 +18,7 @@ KMD_LAYOUT=(-n "$COLS_THUMBS") &&
 
 for l in "${!LAYOUTS[@]}"; do
     echo "Rendering Layout ${LAYOUTS[$l]}"
-    BASE=".images/${PROJECT}_${LAYOUTS[$l]}"
+    BASE=".images/${PROJECT,,}_${LAYOUTS[$l],,}"
     YML="$BASE.yml"
     echo $KMD_LAYOUT
     # note you have to have the quotes for KMD_LAYOUT expansion
