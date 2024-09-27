@@ -4,13 +4,15 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: willpuckett
+      url-base: https://github.com/willpuckett
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: revxlp-config
-      remote: petejohanson
+      remote: willpuckett
       revision: main
   self:
     path: config
