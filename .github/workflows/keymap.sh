@@ -3,7 +3,7 @@
 PROJECT=revxlp
 LAYOUTS=('QWERTY' 'QWERTY_FLIP' 'ENGRAM' 'ENGRAMMER')
 COLS=8
-KEYMAP="config/boards/shields/${PROJECT}/${PROJECT}.keymap"
+KEYMAP="config/${PROJECT}.keymap"
 # See [this link](https://github.com/caksoylar/keymap-drawer/blob/main/KEYMAP_SPEC.md#colsthumbs-notation-specification)
 # for info on cols-thumbs notation
 COLS_THUMBS='333333+3> 3<+333333'
