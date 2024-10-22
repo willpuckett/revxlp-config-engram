@@ -318,16 +318,12 @@ path.combo {
 <text x="480" y="196" class="combo tap layer-activator">num</text>
 </a></g>
 <g class="combo combopos-2">
-<path d="M315,28 l-205,0" class="combo"/>
-<path d="M315,28 l205,0" class="combo"/>
-<rect rx="6" ry="6" x="301" y="15" width="28" height="26" class="combo"/>
-<text x="315" y="28" class="combo tap">ESC</text>
+<rect rx="6" ry="6" x="76" y="43" width="28" height="26" class="combo"/>
+<text x="90" y="56" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-3">
-<path d="M315,84 l-205,0" class="combo"/>
-<path d="M315,84 l205,0" class="combo"/>
-<rect rx="6" ry="6" x="301" y="71" width="28" height="26" class="combo"/>
-<text x="315" y="84" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
+<rect rx="6" ry="6" x="76" y="99" width="28" height="26" class="combo"/>
+<text x="90" y="112" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="676" y="15" width="28" height="26" class="combo"/>
