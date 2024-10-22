@@ -184,13 +184,13 @@
 			timeout-ms = <50>;
 			key-positions = <37 38>;
 			layers = <0>;
-			bindings = <&mo NUM>;
+			bindings = <&mo NUM_L>;
 		};
 		combo_num_r {
 			timeout-ms = <50>;
 			key-positions = <39 40>;
 			layers = <0>;
-			bindings = <&mo NUM>;
+			bindings = <&mo NUM_L>;
 		};
 		combo_esc {
 			timeout-ms = <50>;
