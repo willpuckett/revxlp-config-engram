@@ -182,13 +182,13 @@
 		compatible = "zmk,combos";
 		combo_num_l {
 			timeout-ms = <50>;
-			key-positions = <37 38>;
+			key-positions = <36 37>;
 			layers = <0>;
 			bindings = <&mo NUM_L>;
 		};
 		combo_num_r {
 			timeout-ms = <50>;
-			key-positions = <39 40>;
+			key-positions = <40 41>;
 			layers = <0>;
 			bindings = <&mo NUM_L>;
 		};
@@ -288,9 +288,9 @@
 		engrammer_layer {
 			label = "Engram";
 			bindings = <
-			&kp GRAVE   &kp B        &kp Y       &kp O       &kp U          &kp SQT   &kp SEMI       &kp L          &kp D       &kp W       &kp V         &kp Z
+			&kp GRAVE   &kp J        &kp Y       &kp O       &kp U          &kp SQT   &kp SEMI       &kp L          &kp D       &kp W       &kp X         &kp Z
 			&cwe        &hl LCTRL C  &hl LALT I  &hl LGUI E  &hls LSHFT A   &kp COMMA   &kp DOT  &hrs LSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
-			&kp EQUAL   &kp G        &kp X       &kp J       &kp K          &kp MINUS   &kp SLASH     &kp R          &kp M       &kp F       &kp P         &kp BSLH
+			&kp EQUAL   &kp G        &kp B       &kp V       &kp K          &kp MINUS   &kp SLASH     &kp R          &kp M       &kp F       &kp P         &kp BSLH
 			&mqt KP_L TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &mqt KP_L RETURN
 			>;
 		};
