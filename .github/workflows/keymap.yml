@@ -28,7 +28,7 @@ jobs:
     #     +: python 
     #        pipx
     - run: |
-        python3 -m pip install keymap-drawer
+        python3 -m pipx install keymap-drawer
         .github/workflows/keymap.sh
     - name: get commit info
       id: last_commit   
