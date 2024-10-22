@@ -232,7 +232,7 @@
 			key-positions = <16 28>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
-			bindings = <&kp LG(P)>;
+			bindings = <&kp LG(V)>;
 		};
 		
 		combo_z {
