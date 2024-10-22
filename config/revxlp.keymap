@@ -201,14 +201,43 @@
 		};
 		combo_caps_word {
 			timeout-ms = <50>;
+			key-positions = <2 3>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&caps_word>;
+		};
+		combo_undo {
+			timeout-ms = <50>;
 			key-positions = <13 25>;
 			layers = <0>;
-			bindings = <&caps_word>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(Z)>;
+		};
+		combo_cut {
+			timeout-ms = <50>;
+			key-positions = <14 26>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(X)>;
+		};
+		combo_copy {
+			timeout-ms = <50>;
+			key-positions = <15 27>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(C)>;
+		};
+		combo_paste {
+			timeout-ms = <50>;
+			key-positions = <16 28>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(P)>;
 		};
 		
 		combo_z {
 			timeout-ms = <25>;
-			key-positions = <9 10>;
+			key-positions = <31 32>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp Z>;
@@ -219,6 +248,20 @@
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp Q>;
+		};
+		combo_x {
+			timeout-ms = <25>;
+			key-positions = <25 26>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp X>;
+		};
+		combo_j {
+			timeout-ms = <25>;
+			key-positions = <27 28>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp J>;
 		};
 		combo_minus {
 			timeout-ms = <25>;
@@ -289,7 +332,7 @@
 		engrammer_layer {
 			label = "Engram";
 			bindings = <
-			&none	    &kp J        &kp Y       &kp O       &kp U          &none   &none       &kp L          &kp D       &kp W       &kp X         &none
+			&none	    &none        &kp Y       &kp O       &kp U          &none   &none       &kp L          &kp D       &kp W       &none         &none
 			&none        &hl LCTRL C  &hl LALT I  &hl LGUI E  &hls LSHFT A   &none   &none  &hrs LSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &none
 			&none   &kp G        &kp B       &kp V       &kp K          &none   &none     &kp R          &kp M       &kp F       &kp P         &none
 			&mqt KP_L TAB &mqt NAV_L BSPC  &none  &none &mqt NAV_L SPACE      &mqt KP_L RETURN
@@ -332,10 +375,10 @@
 			&trans   &kp EXCL   &kp AT     &kp LBKT    &kp RBKT         &kp TILDE       &kp PLUS         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
 			&trans   &hl LCTRL LPAR &hl LALT RPAR &hl LGUI LBRC &hls LSHFT RBRC  &kp PIPE    &kp MINUS      &hrs LSHFT LARW   &hr RGUI DARW &hr RALT UARW &hr RCTRL RARW  &none
 			&trans   &kp LT     &kp SLASH     &kp EQUAL      &kp GT             &kp BSLH         &kp LS(LG(Z))        &kp LG(Z)      &kp LG(X)   &kp LG(C)  &kp LG(V)     &none
-			&kp AMPS       &kp BSLH             &trans         &trans      &kp HASH    &kp DOLLAR
+			&kp AMPS       &kp PIPE             &kp BSLH         &trans      &kp HASH    &kp DOLLAR
 			>;
 		};
-		
+
     #if LAYOUT == ENGRAM
 		num_layer {
 			label = "Num";
