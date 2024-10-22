@@ -183,25 +183,25 @@
 		compatible = "zmk,combos";
 		combo_num_l {
 			timeout-ms = <50>;
-			key-positions = <36 37>;
+			key-positions = <37 38>;
 			layers = <0>;
 			bindings = <&mo NUM_L>;
 		};
 		combo_num_r {
 			timeout-ms = <50>;
-			key-positions = <40 41>;
+			key-positions = <39 40>;
 			layers = <0>;
 			bindings = <&mo NUM_L>;
 		};
 		combo_esc {
 			timeout-ms = <50>;
-			key-positions = <1 13>;
+			key-positions = <2 14>;
 			layers = <0>;
 			bindings = <&kp ESC>;
 		};
 		combo_caps_word {
 			timeout-ms = <50>;
-			key-positions = <2 3>;
+			key-positions = <3 15>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&caps_word>;
@@ -307,10 +307,17 @@
 		};
 		combo_grave {
 			timeout-ms = <25>;
-			key-positions = <1 2>;
+			key-positions = <4 5>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp GRAVE>;
+		};
+		combo_excl {
+			timeout-ms = <25>;
+			key-positions = <3 4>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp EXCL>;
 		};
 	};
 	#endif
@@ -335,7 +342,7 @@
 			&none	    &none        &kp Y       &kp O       &kp U          &none   &none       &kp L          &kp D       &kp W       &none         &none
 			&none        &hl LCTRL C  &hl LALT I  &hl LGUI E  &hls LSHFT A   &none   &none  &hrs LSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &none
 			&none   &kp G        &kp B       &kp V       &kp K          &none   &none     &kp R          &kp M       &kp F       &kp P         &none
-			&mqt KP_L TAB &mqt NAV_L BSPC  &none  &none &mqt NAV_L SPACE      &mqt KP_L RETURN
+			&none &mqt KP_L TAB &mqt NAV_L BSPC    &mqt NAV_L SPACE      &mqt KP_L RETURN &none 
 			>;
 		};
 		#elif LAYOUT == QWERTY_FLIP
@@ -375,7 +382,7 @@
 			&trans   &kp EXCL   &kp AT     &kp LBKT    &kp RBKT         &kp TILDE       &kp PLUS         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
 			&trans   &hl LCTRL LPAR &hl LALT RPAR &hl LGUI LBRC &hls LSHFT RBRC  &kp PIPE    &kp MINUS      &hrs LSHFT LARW   &hr RGUI DARW &hr RALT UARW &hr RCTRL RARW  &none
 			&trans   &kp LT     &kp SLASH     &kp EQUAL      &kp GT             &kp BSLH         &kp LS(LG(Z))        &kp LG(Z)      &kp LG(X)   &kp LG(C)  &kp LG(V)     &none
-			&kp AMPS       &kp PIPE             &kp BSLH         &trans      &kp HASH    &kp DOLLAR
+			&none      &kp BSLH  &kp PIPE                        &kp HASH    &kp DOLLAR &none
 			>;
 		};
 
