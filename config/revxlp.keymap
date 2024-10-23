@@ -10,6 +10,8 @@
 // #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/num_word.dtsi>
+#include <layouts/foostan/corne/6column.dtsi>
+
 
 #ifndef LAYOUT
 #define LAYOUT 0
@@ -32,6 +34,12 @@
 #define HM_TAPPING_TERM 280
 #define HM_TAPPING_TERM_FAST 200
 #define HM_TAPPING_TERM_QT 175
+
+// Assigning suitable kscan and matrix transforms
+&foostan_corne_6col_layout {
+    transform = <&default_transform>;
+    kscan = <&kscan0>;
+};
 
 / {
 	behaviors {
