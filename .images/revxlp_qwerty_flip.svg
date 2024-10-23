@@ -290,29 +290,24 @@ path.combo {
 <g transform="translate(300, 196)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 <text x="0" y="0" class="key tap">TAB</text>
-<a href="#num">
-<text x="0" y="24" class="key hold layer-activator">num</text>
-</a></g>
+</g>
 <g transform="translate(360, 196)" class="key keypos-38">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 <text x="0" y="0" class="key tap">BSPC</text>
-<a href="#num">
-<text x="0" y="24" class="key hold layer-activator">num</text>
-</a></g>
+</g>
 <g transform="translate(450, 196)" class="key keypos-39">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<a href="#num">
-<text x="0" y="24" class="key hold layer-activator">num</text>
-</a></g>
+</g>
 <g transform="translate(510, 196)" class="key keypos-40">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 <text x="0" y="0" class="key tap">RETURN</text>
-<a href="#num">
-<text x="0" y="24" class="key hold layer-activator">num</text>
-</a></g>
+</g>
 <g transform="translate(570, 196)" class="key keypos-41">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em" style="font-size: 78%">&amp;num_word</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">1</tspan>
+</text>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="16" y="43" width="28" height="26" class="combo"/>
@@ -431,9 +426,13 @@ path.combo {
 <g transform="translate(0, 56)">
 <g transform="translate(30, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">KP</tspan><tspan x="0" dy="1.2em">DIVIDE</tspan>
+</text>
 </g>
 <g transform="translate(90, 28)" class="key keypos-1">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">_</text>
 </g>
 <g transform="translate(150, 28)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
@@ -484,7 +483,7 @@ path.combo {
 <g transform="translate(30, 84)" class="key keypos-12">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">KP</tspan><tspan x="0" dy="1.2em">DIVIDE</tspan>
+<tspan x="0" dy="-0.6em" style="font-size: 88%">KP</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">MULTIPLY</tspan>
 </text>
 </g>
 <g transform="translate(90, 84)" class="key keypos-13">
@@ -537,9 +536,6 @@ path.combo {
 </g>
 <g transform="translate(30, 140)" class="key keypos-24">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em" style="font-size: 88%">KP</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">MULTIPLY</tspan>
-</text>
 </g>
 <g transform="translate(90, 140)" class="key keypos-25">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
@@ -600,8 +596,8 @@ path.combo {
 <g transform="translate(240, 196)" class="key keypos-36">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 </g>
-<g transform="translate(300, 196)" class="key held keypos-37">
-<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key held"/>
+<g transform="translate(300, 196)" class="key keypos-37">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 </g>
 <g transform="translate(360, 196)" class="key keypos-38">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
