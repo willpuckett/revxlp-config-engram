@@ -8,10 +8,10 @@
 #include <physical_layouts.dtsi>
 
 / {
-    /delete-node/ &default_transform;
     
 	chosen {
 		// zmk,backlight = &backlight;
+    	/delete-node/ zmk,matrix_transform;
 		zmk,physical-layout = &twelve_u_layout;
 		zmk,kscan = &kscan0;
 	};
