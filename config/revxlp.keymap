@@ -482,35 +482,35 @@
 		// 0  1  2  3  4  5  
 		// 12 13 14 15 16 17 
 		// 24 25 26 27 28 29// left-hand keys
-		combo_enter {
+		combo_kp_enter {
 			timeout-ms = <25>;
 			key-positions = <16 28>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_ENTER>;
 		};
-		combo_plus {
+		combo_kp_plus {
 			timeout-ms = <25>;
 			key-positions = <15 27>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_PLUS>;
 		};
-		combo_minus {
+		combo_kp_minus {
 			timeout-ms = <25>;
 			key-positions = <3 15>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_MINUS>;
 		};
-		combo_multiply {
+		combo_kp_multiply {
 			timeout-ms = <25>;
 			key-positions = <14 26>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_MULTIPLY>;
 		};
-		combo_divide {
+		combo_kp_divide {
 			timeout-ms = <25>;
 			key-positions = <2 14>;
 			layers = <NUM_L>;
