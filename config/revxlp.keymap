@@ -13,7 +13,6 @@
 #include "engram.dtsi"
 #include "taps.dtsi"
 
-
 #ifndef LAYOUT
 #define LAYOUT 0
 #endif
@@ -25,8 +24,6 @@
 
 #define NUM_L 1
 
-
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -34,9 +31,9 @@
     #if LAYOUT == ENGRAM
 		engram_layer {
 			bindings = <
-			&rpi F1 ESC         &rpi F2 B        &rpi F3 Y       &rpi F4 O       &rpi F5 U    &sqt_lpar      &dqt_rpar       &rpi F8 L          &rpi F9 D       &rpi F10 W       &rpi F11 V         &rpi F12 Z
-			&hash_buck   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cma_semi   &stop_colon     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
-			&at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
+			&rpi F1 ESC         &rpi F2 B        &rpi F3 Y       &rpi F4 O       &rpi F5 U    &sqlp      &dqrp       &rpi F8 L          &rpi F9 D       &rpi F10 W       &rpi F11 V         &rpi F12 Z
+			&habu   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cmse   &stco     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
+			&atti      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmex     &kp R          &kp M       &kp F       &kp P         &slsh
 			&caps_word &kp TAB &kp BSPC &kp SPACE &kp RETURN &num_word NUM_L
 			>;
 		}; 
