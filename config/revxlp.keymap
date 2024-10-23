@@ -732,7 +732,7 @@
 		#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
 			bindings = <
-			&rpi F1 TILDE &rpi F2 J         &rpi F3 Y           &rpi F4 O       &mt 5 U        &rpi F6 SQT &rpi F7 SEMI  &rpi F8 L        &rpi F9 D      &rpi F10 W      &rpi F11 X       &rpi F12 Z
+			&rpi F1 GRAVE &rpi F2 J         &rpi F3 Y           &rpi F4 O       &mt 5 U        &rpi F6 SQT &rpi F7 SEMI  &rpi F8 L        &rpi F9 D      &rpi F10 W      &rpi F11 X       &rpi F12 Z
 			&caps_word &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
 			&kp BSLH &kp G         &kp B      	    &kp V       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
 			&kp ESC &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
@@ -762,7 +762,7 @@
 		num_layer {
 			bindings = <
 			&none &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      &none &none
-			&kp KP_DIVIDE &kp KP_N0   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS &none &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &none
+			&kp KP_DIVIDE &kp KP_N0   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS &none &kp LSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &none
 			&kp KP_MULTIPLY &kp KP_DOT  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER &none &bt BT_CLR     &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
 			&none &none &none &none &none &none
 			>;
@@ -771,7 +771,7 @@
 		num_layer {
 			bindings = <
 			&none &none   		 &mt KP_N7 N7 &mt KP_N8 N8 &mt KP_N9 N9 &kp KP_MINUS &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      &none &none
-			&kp KP_DIVIDE &mt KP_N0 N0   &mt KP_N4 N4 &mt KP_N5 N5 &mt KP_N6 N6 &kp KP_PLUS &none &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &none
+			&kp KP_DIVIDE &mt KP_N0 N0   &mt KP_N4 N4 &mt KP_N5 N5 &mt KP_N6 N6 &kp KP_PLUS &none &kp LSHFT  &kp RGUI  &kp RALT  &kp RCTRL &none
 			&kp KP_MULTIPLY &mt KP_DOT DOT &mt KP_N1 N1 &mt KP_N2 N2 &mt KP_N3 N3 &kp KP_ENTER &none &bt BT_CLR     &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
 			&none &none &none &none &none &none
 			>;
