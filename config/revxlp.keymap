@@ -166,7 +166,7 @@
 	
 	combos {
 		compatible = "zmk,combos";
-		#if LAYOUT == ENGRAM || LAYOUT == ENGRAMMER
+		#if LAYOUT == ENGRAMMER
 		// combo_kp_l {
 		// 	timeout-ms = <50>;
 		// 	key-positions = <37 38>;
@@ -195,35 +195,7 @@
 			require-prior-idle-ms = <175>;
 			bindings = <&caps_word>;
 		};
-		combo_undo {
-			timeout-ms = <50>;
-			key-positions = <13 25>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&kp LG(Z)>;
-		};
-		combo_cut {
-			timeout-ms = <50>;
-			key-positions = <14 26>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&kp LG(X)>;
-		};
-		combo_copy {
-			timeout-ms = <50>;
-			key-positions = <15 27>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&kp LG(C)>;
-		};
-		combo_paste {
-			timeout-ms = <50>;
-			key-positions = <16 28>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&kp LG(V)>;
-		};
-		
+
 		combo_z {
 			timeout-ms = <25>;
 			key-positions = <31 32>;
@@ -333,34 +305,7 @@
 		// 6  7  8  9  10 11 
 		// 18 19 20 21 22 23 
 		// 30 31 32 33 34 35// right-hand keys
-		combo_left {
-			timeout-ms = <25>;
-			key-positions = <19 31>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&mt HOME LEFT>;
-		};
-		combo_down {
-			timeout-ms = <25>;
-			key-positions = <20 32>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&mt PG_DN DOWN>;
-		};
-		combo_up {
-			timeout-ms = <25>;
-			key-positions = <21 33>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&mt PG_UP UP>;
-		};
-		combo_right {
-			timeout-ms = <25>;
-			key-positions = <22 34>;
-			layers = <0>;
-			require-prior-idle-ms = <175>;
-			bindings = <&mt END RIGHT>;
-		};
+
 		combo_lpar {
 			timeout-ms = <25>;
 			key-positions = <13 15>;
@@ -391,7 +336,7 @@
 		};
 
 
-		#endif
+
 
 		combo_f1 {
 			timeout-ms = <25>;
@@ -477,7 +422,65 @@
 			require-prior-idle-ms = <175>;
 			bindings = <&kp F12>;
 		};
+		#endif
+		combo_undo {
+			timeout-ms = <50>;
+			key-positions = <13 25>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(Z)>;
+		};
+		combo_cut {
+			timeout-ms = <50>;
+			key-positions = <14 26>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(X)>;
+		};
+		combo_copy {
+			timeout-ms = <50>;
+			key-positions = <15 27>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(C)>;
+		};
+		combo_paste {
+			timeout-ms = <50>;
+			key-positions = <16 28>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(V)>;
+		};
 
+		combo_left {
+			timeout-ms = <25>;
+			key-positions = <19 31>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt HOME LEFT>;
+		};
+		combo_down {
+			timeout-ms = <25>;
+			key-positions = <20 32>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PG_DN DOWN>;
+		};
+		combo_up {
+			timeout-ms = <25>;
+			key-positions = <21 33>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PG_UP UP>;
+		};
+		combo_right {
+			timeout-ms = <25>;
+			key-positions = <22 34>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt END RIGHT>;
+		};
+		
 		// #define KEYS_L 
 		// 0  1  2  3  4  5  
 		// 12 13 14 15 16 17 
@@ -536,10 +539,10 @@
     #if LAYOUT == ENGRAM
 		engram_layer {
 			bindings = <
-			&cwe         &kp B        &kp Y       &kp O       &kp U          &sqt_lpar   &dqt_rpar       &kp L          &kp D       &kp W       &kp V         &kp Z
+			&mt F1 ESC         &mt F2 B        &mt F3 Y       &mt F4 O       &mt F5 U    &sqt_lpar      &dqt_rpar       &mt F8 L          &mt F9 D       &mt F10 W       &mt F11 V         &mt F12 Z
 			&hash_buck   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cma_semi   &stop_colon     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
 			&at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
-			&kp TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &kp RETURN
+			&kp TAB &mqt NUM_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NUM_L SPACE      &kp RETURN
 			>;
 		};
 		#elif LAYOUT == ENGRAMMER
@@ -554,19 +557,19 @@
 		#elif LAYOUT == QWERTY_FLIP
 		qwerty_flip_layer {
 			bindings = <
-			&kp GRAVE &kp Q          &kp W        &kp D        &kp F          &kp G       &kp Y &kp J          &kp K        &kp L        &kp SEMI      &kp BSLH
+			&mt F1 GRAVE &mt F2 Q          &mt F3 W        &mt F4 D        &mt F5 F          &mt F6 G       &mt F7 Y &mt F8 J          &mt F9 K        &mt F10 L        &mt F11 SEMI      &mt F12 BSLH
 			&cwe      &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T       &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
 			&kp MINUS &kp Z          &kp X        &kp C        &kp V          &kp B       &kp N &kp M          &kp COMMA    &kp DOT      &kp SLASH     &kp EQUAL
-			&kp TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &kp RETURN
+			&kp TAB &mqt NUM_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NUM_L SPACE      &kp RETURN
 			>;
 		};
     #else
 		qwerty_layer {
 			bindings = <
-			&kp GRAVE &kp Q       &kp W      &kp E       &kp R        &kp T &kp Y &kp U        &kp I      &kp O      &kp P          &kp EQUAL
+			&mt F1 GRAVE &mt F2 Q       &mt F3 W      &mt F4 E       &mt F5 R        &mt F6 T &mt F7 Y &mt F8 U        &mt F9 I      &mt F10 O      &mt F11 P          &mt F12 BSLH
 			&cwe      &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
-			&kp MINUS &kp Z       &kp X      &kp C       &kp V        &kp B &kp N &kp M        &kp COMMA  &kp DOT    &kp SLASH      &kp BSLH
-			&kp TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &kp RETURN
+			&kp MINUS &kp Z       &kp X      &kp C       &kp V        &kp B &kp N &kp M        &kp COMMA  &kp DOT    &kp SLASH      &kp EQUAL
+			&kp TAB &mqt NUM_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NUM_L SPACE      &kp RETURN
 			>;
 		};
     #endif
@@ -591,16 +594,16 @@
 		};
     #endif
 
-	#if LAYOUT != ENGRAMMER
-		nav_layer {
-			bindings = <
-			&none   &none   		&kp AT     		&kp LBKT    	&kp RBKT        &none   &none    &none			&none 			&none 			&none   		&none
-			&none   &hl LCTRL LPAR 	&hl LALT RPAR 	&hl LGUI LBRC 	&hls LSHFT RBRC	&none	&none   &hrs LSHFT LARW &hr RGUI DARW 	&hr RALT UARW 	&hr RCTRL RARW  &none
-			&none   &kp LT     		&kp SLASH     	&kp EQUAL      	&kp GT          &none   &none    	&kp  HOME       &kp PG_DN      	&kp PG_UP   	&kp END      	&none
-			&none   &kp BSLH  		&kp PIPE     	&kp HASH    	&kp DOLLAR 		&none
-			>;
-		};
-	#endif
+	// #if LAYOUT != ENGRAMMER
+	// 	nav_layer {
+	// 		bindings = <
+	// 		&none   &none   		&kp AT     		&kp LBKT    	&kp RBKT        &none   &none    &none			&none 			&none 			&none   		&none
+	// 		&none   &hl LCTRL LPAR 	&hl LALT RPAR 	&hl LGUI LBRC 	&hls LSHFT RBRC	&none	&none   &hrs LSHFT LARW &hr RGUI DARW 	&hr RALT UARW 	&hr RCTRL RARW  &none
+	// 		&none   &kp LT     		&kp SLASH     	&kp EQUAL      	&kp GT          &none   &none    	&kp  HOME       &kp PG_DN      	&kp PG_UP   	&kp END      	&none
+	// 		&none   &kp BSLH  		&kp PIPE     	&kp HASH    	&kp DOLLAR 		&none
+	// 		>;
+	// 	};
+	// #endif
 	};
 };
 
