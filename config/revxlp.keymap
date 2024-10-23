@@ -732,9 +732,9 @@
 		#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
 			bindings = <
-			&rpi F1 TILDE &rpi F2 B         &rpi F3 Y           &rpi F4 O       &mt 5 U        &rpi F6 SQT &rpi F7 SEMI  &rpi F8 L        &rpi F9 D      &rpi F10 W      &rpi F11 V       &rpi F12 Z
+			&rpi F1 TILDE &rpi F2 J         &rpi F3 Y           &rpi F4 O       &mt 5 U        &rpi F6 SQT &rpi F7 SEMI  &rpi F8 L        &rpi F9 D      &rpi F10 W      &rpi F11 X       &rpi F12 Z
 			&cwe &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
-			&kp BSLH &kp G         &kp X      	    &kp J       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
+			&kp BSLH &kp G         &kp B      	    &kp V       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
 			>;
 		};
@@ -751,9 +751,9 @@
 		qwerty_layer {
 			bindings = <
 			&rpi F1 GRAVE &rpi F2 Q       &rpi F3 W      &rpi F4 E       &rpi F5 R        &rpi F6 T &rpi F7 Y &rpi F8 U        &rpi F9 I      &rpi F10 O      &rpi F11 P          &rpi F12 BSLH
-			&cwe      &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
+			&caps_word      &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
 			&kp MINUS &kp Z       &kp X      &kp C       &kp V        &kp B &kp N &kp M        &kp COMMA  &kp DOT    &kp SLASH      &kp EQUAL
-			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
+			&kp ESC &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
 			>;
 		};
     #endif

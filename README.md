@@ -27,6 +27,9 @@ successful
 These maps were made with the awesome
 [keymap drawer](https://keymap-drawer.streamlit.app) by caksoylar.
 
+> [!NOTE]
+> All layouts implement F1-F12 as hold taps on the top row, but they are obscured by the number combo graphics.
+
 <details>
 <summary>
 
