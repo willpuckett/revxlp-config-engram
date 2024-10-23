@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/outputs.h>
- 
+
 #ifndef LAYOUT
-    #define LAYOUT 0
+#define LAYOUT 0
 #endif
 
 #define QWERTY 0
@@ -19,9 +19,9 @@
 #define ENGRAM 2
 #define ENGRAMMER 3
 
-#define NAV_L 1
-#define NUM_L 2
-#define KP_L 3
+#define NUM_L 1
+#define NAV_L 2
+// #define KP_L 3
 
 #define KEYS_L 0 1 2 3 4  5  12 13 14 15 16 17 24 25 26 27 28 29// left-hand keys
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35// right-hand keys
@@ -37,7 +37,6 @@
 		
 		hl: home_row_mod_left {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOME_ROW_MOD_LEFT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <HM_TAPPING_TERM>;
@@ -48,7 +47,6 @@
 		
 		hr: home_row_mod_right {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOME_ROW_MOD_RIGHT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <HM_TAPPING_TERM>;
@@ -59,29 +57,26 @@
 		
 		hls: home_row_mod_left_shift {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOME_ROW_MOD_LEFT_SHIFT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <HM_TAPPING_TERM_FAST>;
-			quick_tap_ms = <HM_TAPPING_TERM_QT>;
+			require-prior-idle-ms = <HM_TAPPING_TERM_QT>;
 			hold-trigger-key-positions = < KEYS_R THUMBS >;
 			bindings = <&kp>, <&kp>;
 		};
 		
 		hrs: home_row_mod_right_shift {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOME_ROW_MOD_RIGHT_SHIFT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <HM_TAPPING_TERM_FAST>;
-			quick_tap_ms = <HM_TAPPING_TERM_QT>;
+			require-prior-idle-ms = <HM_TAPPING_TERM_QT>;
 			hold-trigger-key-positions = < KEYS_L THUMBS >;
 			bindings = <&kp>, <&kp>;
 		};
 		
 		mqt: momentary-quick-tap {
 			compatible = "zmk,behavior-hold-tap";
-			label = "MOMENTARY_QUICK_TAP";
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <200>;
@@ -90,17 +85,8 @@
 			bindings = <&mo>, <&kp>;
 		};
 		
-		cwe: tap_dance_mod_tap {
-			compatible = "zmk,behavior-tap-dance";
-			label = "CAPS-WORD-DOUBLE_TAP";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp ESC>, <&caps_word>;
-		};
-		
 		sqt_lpar: single-quote-left-paren {
 			compatible = "zmk,behavior-mod-morph";
-			label = "SINGLE_QUOTE_LEFT_PAREN";
 			#binding-cells = <0>;
 			bindings = <&kp SQT>, <&kp LPAR>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -109,7 +95,6 @@
 		
 		dqt_rpar: double-quote-right-paren {
 			compatible = "zmk,behavior-mod-morph";
-			label = "DOUBLE_QUOTE_RIGHT_PAREN";
 			#binding-cells = <0>;
 			bindings = <&kp DQT>, <&kp RPAR>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -118,7 +103,6 @@
 		
 		cma_semi: comma-semicolon {
 			compatible = "zmk,behavior-mod-morph";
-			label = "COMMA_SEMICOLON";
 			#binding-cells = <0>;
 			bindings = <&kp COMMA>, <&kp SEMI>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -127,7 +111,6 @@
 		
 		stop_colon: stop-colon {
 			compatible = "zmk,behavior-mod-morph";
-			label = "STOP_COLON";
 			#binding-cells = <0>;
 			bindings = <&kp DOT>, <&kp COLON>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -136,7 +119,6 @@
 		
 		qmark_excl: questionmark-exclamation {
 			compatible = "zmk,behavior-mod-morph";
-			label = "QUESTIONMARK_EXCLAMATION";
 			#binding-cells = <0>;
 			bindings = <&kp QMARK>, <&kp EXCL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -145,7 +127,6 @@
 		
 		slsh: forward-and-backslash {
 			compatible = "zmk,behavior-mod-morph";
-			label = "SLASHES";
 			#binding-cells = <0>;
 			bindings = <&kp FSLH>, <&kp BSLH>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -154,7 +135,6 @@
 		
 		hash_buck: pound-dollar {
 			compatible = "zmk,behavior-mod-morph";
-			label = "HASH_BUCK";
 			#binding-cells = <0>;
 			bindings = <&kp POUND>, <&kp DOLLAR>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -163,40 +143,42 @@
 		
 		at_til: at-tilde {
 			compatible = "zmk,behavior-mod-morph";
-			label = "AT_TILDE";
 			#binding-cells = <0>;
 			bindings = <&kp AT>, <&kp GRAVE>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 			keep-mods = <(MOD_LALT|MOD_LCTL|MOD_LGUI|MOD_RALT|MOD_RGUI|MOD_RCTL)>;
 		};
 		
-		ZMK_MACRO(af,
-		wait-ms = <30>;
-		tap-ms = <40>;
-		bindings = <&kp EQUAL  &kp GT>;
-		)
+		// ZMK_MACRO(af,
+		// wait-ms = <30>;
+		// tap-ms = <40>;
+		// bindings = <&kp EQUAL  &kp GT>;
+		// )
 		
 	};
-
-	#if LAYOUT == ENGRAM || LAYOUT == ENGRAMMER
+	
 	combos {
 		compatible = "zmk,combos";
-		combo_num_l {
-			timeout-ms = <50>;
-			key-positions = <37 38>;
-			layers = <0>;
-			bindings = <&mo NUM_L>;
-		};
-		combo_num_r {
-			timeout-ms = <50>;
-			key-positions = <39 40>;
-			layers = <0>;
-			bindings = <&mo NUM_L>;
-		};
+		#if LAYOUT == ENGRAM || LAYOUT == ENGRAMMER
+		// combo_kp_l {
+		// 	timeout-ms = <50>;
+		// 	key-positions = <37 38>;
+		// 	layers = <0>;
+		// 	require-prior-idle-ms = <175>;
+		// 	bindings = <&mo KP_L>;
+		// };
+		// combo_kp_r {
+		// 	timeout-ms = <50>;
+		// 	key-positions = <39 40>;
+		// 	layers = <0>;
+		// 	require-prior-idle-ms = <175>;
+		// 	bindings = <&mo KP_L>;
+		// };
 		combo_esc {
 			timeout-ms = <50>;
 			key-positions = <2 14>;
 			layers = <0>;
+			require-prior-idle-ms = <175>;
 			bindings = <&kp ESC>;
 		};
 		combo_caps_word {
@@ -307,7 +289,7 @@
 		};
 		combo_grave {
 			timeout-ms = <25>;
-			key-positions = <4 5>;
+			key-positions = <2 3>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp GRAVE>;
@@ -319,30 +301,247 @@
 			require-prior-idle-ms = <175>;
 			bindings = <&kp EXCL>;
 		};
+		combo_at {
+			timeout-ms = <25>;
+			key-positions = <4 16>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp AT>;
+		};
+		combo_bslh {
+			timeout-ms = <25>;
+			key-positions = <9 21>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp BSLH>;
+		};
+		combo_equal {
+			timeout-ms = <25>;
+			key-positions = <8 20>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp EQUAL>;
+		};
+		// #define KEYS_R 
+		6  7  8  9  10 11 
+		18 19 20 21 22 23 
+		30 31 32 33 34 35// right-hand keys
+		combo_left {
+			timeout-ms = <25>;
+			key-positions = <19 31>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt HOME LEFT>;
+		};
+		combo_down {
+			timeout-ms = <25>;
+			key-positions = <20 32>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PG_DN DOWN>;
+		};
+		combo_up {
+			timeout-ms = <25>;
+			key-positions = <21 33>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PG_UP UP>;
+		};
+		combo_right {
+			timeout-ms = <25>;
+			key-positions = <22 34>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt END RIGHT>;
+		};
+		combo_lpar {
+			timeout-ms = <25>;
+			key-positions = <13 15>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LPAR>;
+		};
+		combo_rpar {
+			timeout-ms = <25>;
+			key-positions = <14 16>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp RPAR>;
+		};
+		combo_lbrkt {
+			timeout-ms = <25>;
+			key-positions = <13 14 15>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LBKT>;
+		};
+		combo_rbrkt {
+			timeout-ms = <25>;
+			key-positions = <14 15 16>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp RBKT>;
+		};
+
+
+		#endif
+
+		combo_f1 {
+			timeout-ms = <25>;
+			key-positions = <26 27>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F1>;
+		};
+		combo_f2 {
+			timeout-ms = <25>;
+			key-positions = <26 28>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F2>;
+		};
+		combo_f3 {
+			timeout-ms = <25>;
+			key-positions = <27 28>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F3>;
+		};
+		combo_f4 {
+			timeout-ms = <25>;
+			key-positions = <14 15>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F4>;
+		};
+		combo_f5 {
+			timeout-ms = <25>;
+			key-positions = <14 16>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F5>;
+		};
+		combo_f6 {
+			timeout-ms = <25>;
+			key-positions = <15 16>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F6>;
+		};
+		combo_f7 {
+			timeout-ms = <25>;
+			key-positions = <2 3>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F7>;
+		};
+		combo_f8 {
+			timeout-ms = <25>;
+			key-positions = <2 4>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F8>;
+		};
+		combo_f9 {
+			timeout-ms = <25>;
+			key-positions = <3 4>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F9>;
+		};
+		combo_f10 {
+			timeout-ms = <25>;
+			key-positions = <25 26>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F10>;
+		};
+		combo_f11 {
+			timeout-ms = <25>;
+			key-positions = <13 25>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F11>;
+		};
+		combo_f12 {
+			timeout-ms = <25>;
+			key-positions = <13 14>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp F12>;
+		};
+
+		// #define KEYS_L 
+		// 0  1  2  3  4  5  
+		// 12 13 14 15 16 17 
+		// 24 25 26 27 28 29// left-hand keys
+		combo_enter {
+			timeout-ms = <25>;
+			key-positions = <16 28>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp KP_ENTER>;
+		};
+		combo_plus {
+			timeout-ms = <25>;
+			key-positions = <15 27>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp KP_PLUS>;
+		};
+		combo_minus {
+			timeout-ms = <25>;
+			key-positions = <3 15>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp KP_MINUS>;
+		};
+		combo_multiply {
+			timeout-ms = <25>;
+			key-positions = <14 26>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp KP_MULTIPLY>;
+		};
+		combo_divide {
+			timeout-ms = <25>;
+			key-positions = <2 14>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp KP_DIVIDE>;
+		};
+		combo_exponent {
+			timeout-ms = <25>;
+			key-positions = <4 16>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp CARET>;
+		};
+
 	};
-	#endif
+
+
+
 	
 	keymap {
 		compatible = "zmk,keymap";
 		
     #if LAYOUT == ENGRAM
 		engram_layer {
-			label = "Engram";
 			bindings = <
 			&cwe         &kp B        &kp Y       &kp O       &kp U          &sqt_lpar   &dqt_rpar       &kp L          &kp D       &kp W       &kp V         &kp Z
 			&hash_buck   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cma_semi   &stop_colon     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
 			&at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
-			&mqt KP_L TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &mqt KP_L RETURN
+			&kp TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &kp RETURN
 			>;
 		};
 		#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
-			label = "Engram";
 			bindings = <
-			&none	    &none        &kp Y       &kp O       &kp U          &none   &none       &kp L          &kp D       &kp W       &none         &none
-			&none        &hl LCTRL C  &hl LALT I  &hl LGUI E  &hls LSHFT A   &none   &none  &hrs LSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &none
-			&none   &kp G        &kp B       &kp V       &kp K          &none   &none     &kp R          &kp M       &kp F       &kp P         &none
-			&none &mqt KP_L TAB &mqt NAV_L BSPC    &mqt NAV_L SPACE      &mqt KP_L RETURN &none 
+			&none &none         &kp Y           &kp O       &kp U        &none &none  &kp L        &kp D      &kp W      &none       &none
+			&none &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &none &none  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &none
+			&none &kp G         &kp B      	    &kp V       &kp K        &none &none  &kp R        &kp M      &kp F      &kp P       &none
+			&none &mqt NUM_L TAB &mqt NAV_L BSPC &mqt NAV_L SPACE &mqt NUM_L RETURN &none
 			>;
 		};
 		#elif LAYOUT == QWERTY_FLIP
@@ -351,7 +550,7 @@
 			&kp GRAVE &kp Q          &kp W        &kp D        &kp F          &kp G       &kp Y &kp J          &kp K        &kp L        &kp SEMI      &kp BSLH
 			&cwe      &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T       &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
 			&kp MINUS &kp Z          &kp X        &kp C        &kp V          &kp B       &kp N &kp M          &kp COMMA    &kp DOT      &kp SLASH     &kp EQUAL
-			&mqt KP_L TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &mqt KP_L RETURN
+			&kp TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &kp RETURN
 			>;
 		};
     #else
@@ -360,7 +559,7 @@
 			&kp GRAVE &kp Q       &kp W      &kp E       &kp R        &kp T &kp Y &kp U        &kp I      &kp O      &kp P          &kp EQUAL
 			&cwe      &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
 			&kp MINUS &kp Z       &kp X      &kp C       &kp V        &kp B &kp N &kp M        &kp COMMA  &kp DOT    &kp SLASH      &kp BSLH
-			&mqt KP_L TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &mqt KP_L RETURN
+			&kp TAB &mqt NAV_L BSPC  &mqt NUM_L LBKT  &mqt NUM_L RBKT &mqt NAV_L SPACE      &kp RETURN
 			>;
 		};
     #endif
@@ -375,20 +574,9 @@
 		//   _    _    _    _              _              _    _    _    _    _
 		// )
 		
-		
-		nav_layer {
-			label = "Nav";
-			bindings = <
-			&trans   &kp EXCL   &kp AT     &kp LBKT    &kp RBKT         &kp TILDE       &kp PLUS         &kp  HOME       &kp PG_DN      &kp PG_UP   &kp END    &none
-			&trans   &hl LCTRL LPAR &hl LALT RPAR &hl LGUI LBRC &hls LSHFT RBRC  &kp PIPE    &kp MINUS      &hrs LSHFT LARW   &hr RGUI DARW &hr RALT UARW &hr RCTRL RARW  &none
-			&trans   &kp LT     &kp SLASH     &kp EQUAL      &kp GT             &kp BSLH         &kp LS(LG(Z))        &kp LG(Z)      &kp LG(X)   &kp LG(C)  &kp LG(V)     &none
-			&none      &kp BSLH  &kp PIPE                        &kp HASH    &kp DOLLAR &none
-			>;
-		};
 
     #if LAYOUT == ENGRAM
 		num_layer {
-			label = "Num";
 			bindings = <
 			&kp F1       &kp F2      &kp F3      &kp F4          &kp F5       &kp F6        &kp F7         &kp F8    &kp F9     &kp F10     &kp F11    &kp F12
 			&kp LBRC     &kp PIPE    &kp EQUAL   &kp TILDE      &kp PLUS      &kp LT        &kp GT     &kp CARET     &kp AMPS   &kp PRCNT   &kp STAR   &kp RBRC
@@ -398,24 +586,24 @@
 		};
     #else
 		num_layer {
-			label = "Num";
 			bindings = <
-			&kp F1       &kp F2      &kp F3      &kp F4          &kp F5       &kp F6        &kp F7         &kp F8    &kp F9     &kp F10     &kp F11    &kp F12
-			&kp LBRC     &kp EXCL    &kp AT   &kp POUND      &kp DOLLAR      &kp PERCENT    &kp CARET     &kp AMPS  &kp ASTRK   &kp LPAR   &kp RPAR   &kp RBRC
-			&kp LBKT     &kp N1      &kp N2      &kp N3         &kp N4        &kp N5        &kp N6     &kp N7        &kp N8     &kp N9      &kp N0     &kp RBKT
-			&trans   &trans          &trans        &trans        &trans &trans
+			&none &none   		 &mt KP_N7 N7 &mt KP_N8 N8 &mt KP_N9 N9 &none &none &bt BT_CLR     &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
+			&none &mt KP_N0 N0   &mt KP_N4 N4 &mt KP_N5 N5 &mt KP_N6 N6 &none &none &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &none
+			&none &mt KP_DOT DOT &mt KP_N1 N1 &mt KP_N2 N2 &mt KP_N3 N3 &none &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      &none &none
+			&none &none &none &none &none &none
 			>;
 		};
     #endif
-		
-		kp_layer {
-			label = "Kp";
+
+		nav_layer {
 			bindings = <
-			&bootloader    &bt BT_CLR   &bt BT_PRV   &bt BT_NXT      &out OUT_USB         &out OUT_BLE   &kp KP_DIVIDE     &kp  KP_N7  &kp KP_N8   &kp KP_N9   &kp KP_MINUS      &none
-			&trans         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3         &bt BT_SEL 4 &kp KP_MULTIPLY     &kp KP_N4    &kp KP_N5    &kp KP_N6   &kp KP_PLUS      &none
-			&trans         &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE          &kp C_BRI_DN      &kp C_BRI_UP         &kp LA(N6)     &kp KP_N1   &kp KP_N2   &kp KP_N3  &kp KP_ENTER    &kp EQUAL
-			&trans       &trans         &trans         &trans      &kp KP_N0    &kp KP_DOT
+			&none   &none   		&kp AT     		&kp LBKT    	&kp RBKT        &none   &none    &none			&none 			&none 			&none   		&none
+			&none   &hl LCTRL LPAR 	&hl LALT RPAR 	&hl LGUI LBRC 	&hls LSHFT RBRC	&none	&none   &hrs LSHFT LARW &hr RGUI DARW 	&hr RALT UARW 	&hr RCTRL RARW  &none
+			&none   &kp LT     		&kp SLASH     	&kp EQUAL      	&kp GT          &none   &none    	&kp  HOME       &kp PG_DN      	&kp PG_UP   	&kp END      	&none
+			&none   &kp BSLH  		&kp PIPE     	&kp HASH    	&kp DOLLAR 		&none
 			>;
 		};
+
 	};
 };
+
