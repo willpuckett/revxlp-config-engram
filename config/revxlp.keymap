@@ -713,7 +713,7 @@
     #if LAYOUT == ENGRAM
 		engram_layer {
 			bindings = <
-			&mqt1 ESC         &mqt2 B        &mqt F3 Y       &mqt F4 O       &mqt F5 U    &sqt_lpar      &dqt_rpar       &mqt F8 L          &mqt F9 D       &mqt F10 W       &mqt F11 V         &mqt F12 Z
+			&mqt F1 ESC         &mqt F2 B        &mqt F3 Y       &mqt F4 O       &mqt F5 U    &sqt_lpar      &dqt_rpar       &mqt F8 L          &mqt F9 D       &mqt F10 W       &mqt F11 V         &mqt F12 Z
 			&hash_buck   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cma_semi   &stop_colon     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
 			&at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
