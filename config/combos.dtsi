@@ -1,3 +1,6 @@
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/42.h"
+
 #define RPI 175
 
 //  ╭─────────────────────────┬─────────────────────────╮
@@ -15,6 +18,7 @@
 / {
 	combos {
 		compatible = "zmk,combos";
+	// Rotate Engrammer center column to home row
 	#if LAYOUT == ENGRAMMER
 		ZMK_COMBO(minus, &kp MINUS, 13 14, 0, 25, RPI)
 		ZMK_COMBO(comma, &kp COMMA, 14 15, 0, 25, RPI)
@@ -23,6 +27,7 @@
 		ZMK_COMBO(dot, &kp DOT, 20 21, 0, 25, RPI)
 		ZMK_COMBO(slash, &kp SLASH, 21 22, 0, 25, RPI)
 	#endif
+	// Numbers
 	#if LAYOUT != ENGRAM
 		ZMK_COMBO(1, &mt EXCL N1, 0 12, 0, 50, RPI)
 		ZMK_COMBO(2, &mt AT N2, 1 13, 0, 50, RPI)
@@ -37,6 +42,7 @@
 		ZMK_COMBO(lbrkt, &mt LBRC LBKT, 10 22, 0, 50, RPI) 
         ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
 	#endif
+	// Engram Numbers
 	#if LAYOUT == ENGRAM
 		ZMK_COMBO(lbrkt, &mt LBRC LBKT, 0 12, 0, 50, RPI)
 		ZMK_COMBO(1, &mt PIPE N1, 1 13, 0, 50, RPI)
@@ -51,11 +57,13 @@
 		ZMK_COMBO(0, &mt STAR N0, 10 22, 0, 50, RPI) 
         ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
 	#endif
+		// Clipboard
 		ZMK_COMBO(undo, &kp LG(Z), 13 25, 0, 50, RPI)
 		ZMK_COMBO(redo, &kp LG(Z), 12 24, 0, 50, RPI)
 		ZMK_COMBO(cut, &kp LG(X), 14 26, 0, 50, RPI)
 		ZMK_COMBO(copy, &kp LG(C), 15 27, 0, 50, RPI) 
         ZMK_COMBO(paste, &kp LG(V), 16 28, 0, 50, RPI)
+		// Navigation
 		ZMK_COMBO(left, &mt HOME LEFT, 19 31, 0, 50, RPI)
 		ZMK_COMBO(down, &mt PG_DN DOWN, 20 32, 0, 50, RPI)
 		ZMK_COMBO(up, &mt PG_UP UP, 21 33, 0, 50, RPI) 
