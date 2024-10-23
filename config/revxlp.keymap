@@ -20,7 +20,7 @@
 #define ENGRAMMER 3
 
 #define NUM_L 1
-#define NAV_L 2
+// #define NAV_L 2
 // #define KP_L 3
 
 #define KEYS_L 0 1 2 3 4  5  12 13 14 15 16 17 24 25 26 27 28 29// left-hand keys
@@ -322,21 +322,18 @@
 		};
 		combo_lbrkt {
 			timeout-ms = <25>;
-			key-positions = <13 14 15>;
+			key-positions = <25 27>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp LBKT>;
 		};
 		combo_rbrkt {
 			timeout-ms = <25>;
-			key-positions = <14 15 16>;
+			key-positions = <26 28>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp RBKT>;
 		};
-
-
-
 
 		combo_f1 {
 			timeout-ms = <25>;
@@ -423,6 +420,7 @@
 			bindings = <&kp F12>;
 		};
 		#endif
+
 		combo_undo {
 			timeout-ms = <50>;
 			key-positions = <13 25>;
@@ -453,28 +451,28 @@
 		};
 
 		combo_left {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <19 31>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&mt HOME LEFT>;
 		};
 		combo_down {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <20 32>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&mt PG_DN DOWN>;
 		};
 		combo_up {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <21 33>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
 			bindings = <&mt PG_UP UP>;
 		};
 		combo_right {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <22 34>;
 			layers = <0>;
 			require-prior-idle-ms = <175>;
@@ -486,46 +484,46 @@
 		// 12 13 14 15 16 17 
 		// 24 25 26 27 28 29// left-hand keys
 		combo_kp_enter {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <16 28>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_ENTER>;
 		};
+		combo_exponent {
+			timeout-ms = <50>;
+			key-positions = <4 16>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp CARET>;
+		};
 		combo_kp_plus {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <15 27>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_PLUS>;
 		};
 		combo_kp_minus {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <3 15>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_MINUS>;
 		};
 		combo_kp_multiply {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <14 26>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_MULTIPLY>;
 		};
 		combo_kp_divide {
-			timeout-ms = <25>;
+			timeout-ms = <50>;
 			key-positions = <2 14>;
 			layers = <NUM_L>;
 			require-prior-idle-ms = <175>;
 			bindings = <&kp KP_DIVIDE>;
-		};
-		combo_exponent {
-			timeout-ms = <25>;
-			key-positions = <4 16>;
-			layers = <NUM_L>;
-			require-prior-idle-ms = <175>;
-			bindings = <&kp CARET>;
 		};
 
 	};

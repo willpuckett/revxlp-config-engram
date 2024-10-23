@@ -368,16 +368,16 @@ path.combo {
 <text x="210" y="84" class="combo tap">)</text>
 </g>
 <g class="combo combopos-19">
-<path d="M150,84 l-40,0" class="combo"/>
-<path d="M150,84 l40,0" class="combo"/>
-<rect rx="6" ry="6" x="136" y="71" width="28" height="26" class="combo"/>
-<text x="150" y="84" class="combo tap">[</text>
+<path d="M150,140 l-40,0" class="combo"/>
+<path d="M150,140 l40,0" class="combo"/>
+<rect rx="6" ry="6" x="136" y="127" width="28" height="26" class="combo"/>
+<text x="150" y="140" class="combo tap">[</text>
 </g>
 <g class="combo combopos-20">
-<path d="M210,84 l-40,0" class="combo"/>
-<path d="M210,84 l40,0" class="combo"/>
-<rect rx="6" ry="6" x="196" y="71" width="28" height="26" class="combo"/>
-<text x="210" y="84" class="combo tap">]</text>
+<path d="M210,140 l-40,0" class="combo"/>
+<path d="M210,140 l40,0" class="combo"/>
+<rect rx="6" ry="6" x="196" y="127" width="28" height="26" class="combo"/>
+<text x="210" y="140" class="combo tap">]</text>
 </g>
 <g class="combo combopos-21">
 <rect rx="6" ry="6" x="76" y="99" width="28" height="26" class="combo"/>
@@ -664,32 +664,32 @@ path.combo {
 </text>
 </g>
 <g class="combo combopos-13">
+<rect rx="6" ry="6" x="256" y="43" width="28" height="26" class="combo"/>
+<text x="270" y="56" class="combo tap">^</text>
+</g>
+<g class="combo combopos-14">
 <rect rx="6" ry="6" x="196" y="99" width="28" height="26" class="combo"/>
 <text x="210" y="112" class="combo tap">
 <tspan x="210" dy="-0.6em">KP</tspan><tspan x="210" dy="1.2em">PLUS</tspan>
 </text>
 </g>
-<g class="combo combopos-14">
+<g class="combo combopos-15">
 <rect rx="6" ry="6" x="196" y="43" width="28" height="26" class="combo"/>
 <text x="210" y="56" class="combo tap">
 <tspan x="210" dy="-0.6em">KP</tspan><tspan x="210" dy="1.2em">MINUS</tspan>
 </text>
 </g>
-<g class="combo combopos-15">
+<g class="combo combopos-16">
 <rect rx="6" ry="6" x="136" y="99" width="28" height="26" class="combo"/>
 <text x="150" y="112" class="combo tap">
 <tspan x="150" dy="-0.6em" style="font-size: 88%">KP</tspan><tspan x="150" dy="1.2em" style="font-size: 88%">MULTIPLY</tspan>
 </text>
 </g>
-<g class="combo combopos-16">
+<g class="combo combopos-17">
 <rect rx="6" ry="6" x="136" y="43" width="28" height="26" class="combo"/>
 <text x="150" y="56" class="combo tap">
 <tspan x="150" dy="-0.6em">KP</tspan><tspan x="150" dy="1.2em">DIVIDE</tspan>
 </text>
-</g>
-<g class="combo combopos-17">
-<rect rx="6" ry="6" x="256" y="43" width="28" height="26" class="combo"/>
-<text x="270" y="56" class="combo tap">^</text>
 </g>
 </g>
 </g>
