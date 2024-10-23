@@ -84,6 +84,13 @@
 			global-quick-tap;
 			bindings = <&mo>, <&kp>;
 		};
+
+		cwe: tap_dance_mod_tap {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp ESC>, <&caps_word>;
+		};
 		
 		sqt_lpar: single-quote-left-paren {
 			compatible = "zmk,behavior-mod-morph";
@@ -323,9 +330,9 @@
 			bindings = <&kp EQUAL>;
 		};
 		// #define KEYS_R 
-		6  7  8  9  10 11 
-		18 19 20 21 22 23 
-		30 31 32 33 34 35// right-hand keys
+		// 6  7  8  9  10 11 
+		// 18 19 20 21 22 23 
+		// 30 31 32 33 34 35// right-hand keys
 		combo_left {
 			timeout-ms = <25>;
 			key-positions = <19 31>;
@@ -541,7 +548,7 @@
 			&none &none         &kp Y           &kp O       &kp U        &none &none  &kp L        &kp D      &kp W      &none       &none
 			&none &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &none &none  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &none
 			&none &kp G         &kp B      	    &kp V       &kp K        &none &none  &kp R        &kp M      &kp F      &kp P       &none
-			&none &mqt NUM_L TAB &mqt NAV_L BSPC &mqt NAV_L SPACE &mqt NUM_L RETURN &none
+			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
 			>;
 		};
 		#elif LAYOUT == QWERTY_FLIP
@@ -563,17 +570,6 @@
 			>;
 		};
     #endif
-		
-		
-		// ;; I used #(sft /) to release the shift from rolls with <
-		// (deflayer navigation
-		//   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-		//   _    !    @    [    ]    _    _    home pgdn pgup end  _    _    _
-		//   _ @clp @arp @mlb @srb  @af    _    @sl  @md  @au  @cr  _    _
-		//   < #(sft /) =   >    _    _    M-S-z M-z M-x  M-c  M-v  _    _
-		//   _    _    _    _              _              _    _    _    _    _
-		// )
-		
 
     #if LAYOUT == ENGRAM
 		num_layer {
@@ -595,6 +591,7 @@
 		};
     #endif
 
+	#if LAYOUT != ENGRAMMER
 		nav_layer {
 			bindings = <
 			&none   &none   		&kp AT     		&kp LBKT    	&kp RBKT        &none   &none    &none			&none 			&none 			&none   		&none
@@ -603,7 +600,7 @@
 			&none   &kp BSLH  		&kp PIPE     	&kp HASH    	&kp DOLLAR 		&none
 			>;
 		};
-
+	#endif
 	};
 };
 
