@@ -84,6 +84,16 @@
 			require-prior-idle-ms = <HM_TAPPING_TERM_QT>;
 			bindings = <&mo>, <&kp>;
 		};
+		
+		rpi: require-prior-idle {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <200>;	
+			require-prior-idle-ms = <HM_TAPPING_TERM_QT>;
+			bindings = <&kp>, <&kp>;
+		};
 
 		cwe: tap_dance_mod_tap {
 			compatible = "zmk,behavior-tap-dance";
@@ -713,7 +723,7 @@
     #if LAYOUT == ENGRAM
 		engram_layer {
 			bindings = <
-			&mqt F1 ESC         &mqt F2 B        &mqt F3 Y       &mqt F4 O       &mqt F5 U    &sqt_lpar      &dqt_rpar       &mqt F8 L          &mqt F9 D       &mqt F10 W       &mqt F11 V         &mqt F12 Z
+			&rpi F1 ESC         &rpi F2 B        &rpi F3 Y       &rpi F4 O       &rpi F5 U    &sqt_lpar      &dqt_rpar       &rpi F8 L          &rpi F9 D       &rpi F10 W       &rpi F11 V         &rpi F12 Z
 			&hash_buck   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cma_semi   &stop_colon     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
 			&at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
@@ -722,7 +732,7 @@
 		#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
 			bindings = <
-			&mqt F1 TILDE &mqt F2 B         &mqt F3 Y           &mqt F4 O       &mt 5 U        &mqt F6 SQT &mqt F7 SEMI  &mqt F8 L        &mqt F9 D      &mqt F10 W      &mqt F11 V       &mqt F12 Z
+			&rpi F1 TILDE &rpi F2 B         &rpi F3 Y           &rpi F4 O       &mt 5 U        &rpi F6 SQT &rpi F7 SEMI  &rpi F8 L        &rpi F9 D      &rpi F10 W      &rpi F11 V       &rpi F12 Z
 			&cwe &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
 			&kp BSLH &kp G         &kp X      	    &kp J       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
@@ -731,7 +741,7 @@
 		#elif LAYOUT == QWERTY_FLIP
 		qwerty_flip_layer {
 			bindings = <
-			&mqt F1 GRAVE &mqt F2 Q  &mqt F3 W   &mqt F4 D   &mqt F5 F     &mqt F6 G    &mqt F7 Y &mqt F8 J   &mqt F9 K  &mqt F10 L  &mqt F11 SEMI &mqt F12 BSLH
+			&rpi F1 GRAVE &rpi F2 Q  &rpi F3 W   &rpi F4 D   &rpi F5 F     &rpi F6 G    &rpi F7 Y &rpi F8 J   &rpi F9 K  &rpi F10 L  &rpi F11 SEMI &rpi F12 BSLH
 			&cwe      &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T       &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
 			&kp MINUS &kp Z          &kp X        &kp C        &kp V          &kp B       &kp N &kp M          &kp COMMA    &kp DOT      &kp SLASH     &kp EQUAL
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
@@ -740,7 +750,7 @@
     #else
 		qwerty_layer {
 			bindings = <
-			&mqt F1 GRAVE &mqt F2 Q       &mqt F3 W      &mqt F4 E       &mqt F5 R        &mqt F6 T &mqt F7 Y &mqt F8 U        &mqt F9 I      &mqt F10 O      &mqt F11 P          &mqt F12 BSLH
+			&rpi F1 GRAVE &rpi F2 Q       &rpi F3 W      &rpi F4 E       &rpi F5 R        &rpi F6 T &rpi F7 Y &rpi F8 U        &rpi F9 I      &rpi F10 O      &rpi F11 P          &rpi F12 BSLH
 			&cwe      &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
 			&kp MINUS &kp Z       &kp X      &kp C       &kp V        &kp B &kp N &kp M        &kp COMMA  &kp DOT    &kp SLASH      &kp EQUAL
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
