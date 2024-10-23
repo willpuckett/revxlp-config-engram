@@ -420,6 +420,180 @@
 			bindings = <&kp F12>;
 		};
 		#endif
+		#if LAYOUT == QWERTY || LAYOUT == QWERTY_FLIP
+		combo_1 {
+			timeout-ms = <50>;
+			key-positions = <0 12>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt EXCL N1>;
+		};
+		combo_2 {
+			timeout-ms = <50>;
+			key-positions = <1 13>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt AT N2>;
+		};
+		combo_3 {
+			timeout-ms = <50>;
+			key-positions = <2 14>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt HASH N3>;
+		};
+		combo_4 {
+			timeout-ms = <50>;
+			key-positions = <3 15>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt DOLLAR N4>;
+		};
+		combo_5 {
+			timeout-ms = <50>;
+			key-positions = <4 16>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PERCENT N5>;
+		};
+		combo_6 {
+			timeout-ms = <50>;
+			key-positions = <5 17>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt CARET N6>;
+		};
+		combo_7 {
+			timeout-ms = <50>;
+			key-positions = <6 18>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt AMPS N7>;
+		};
+		combo_8 {
+			timeout-ms = <50>;
+			key-positions = <7 19>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt STAR N8>;
+		};
+		combo_9 {
+			timeout-ms = <50>;
+			key-positions = <8 20>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt LPAR N9>;
+		};
+		combo_0 {
+			timeout-ms = <50>;
+			key-positions = <9 21>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt RPAR N0>;
+		};
+		combo_lbrkt {
+			timeout-ms = <50>;
+			key-positions = <10 22>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt LBRC LBKT>;
+		};
+		combo_rbrkt {
+			timeout-ms = <50>;
+			key-positions = <11 23>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt RBRC RBKT>;
+		};
+
+		#endif
+		#if LAYOUT == ENGRAM
+		combo_lbrkt {
+			timeout-ms = <50>;
+			key-positions = <0 12>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt LBRC LBKT>;
+		};
+		combo_1 {
+			timeout-ms = <50>;
+			key-positions = <1 13>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PIPE N1>;
+		};
+		combo_2 {
+			timeout-ms = <50>;
+			key-positions = <2 14>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt EQUAL N2>;
+		};
+		combo_3 {
+			timeout-ms = <50>;
+			key-positions = <3 15>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt TILDE N3>;
+		};
+		combo_4 {
+			timeout-ms = <50>;
+			key-positions = <4 16>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PLUS N4>;
+		};
+		combo_5 {
+			timeout-ms = <50>;
+			key-positions = <5 17>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt LT N5>;
+		};
+		combo_6 {
+			timeout-ms = <50>;
+			key-positions = <6 18>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt GT N6>;
+		};
+		combo_7 {
+			timeout-ms = <50>;
+			key-positions = <7 19>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt CARET N7>;
+		};
+		combo_8 {
+			timeout-ms = <50>;
+			key-positions = <8 20>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt AMPS N8>;
+		};
+		combo_9 {
+			timeout-ms = <50>;
+			key-positions = <9 21>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt PERCENT N9>;
+		};
+		combo_0 {
+			timeout-ms = <50>;
+			key-positions = <10 22>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt STAR N0>;
+		};
+		combo_rbrkt {
+			timeout-ms = <50>;
+			key-positions = <11 23>;
+			layers = <NUM_L>;
+			require-prior-idle-ms = <175>;
+			bindings = <&mt RBRC RBKT>;
+		};
+
+		#endif
 
 		combo_undo {
 			timeout-ms = <50>;
@@ -575,18 +749,18 @@
     #if LAYOUT == ENGRAM
 		num_layer {
 			bindings = <
-			&kp F1       &kp F2      &kp F3      &kp F4          &kp F5       &kp F6        &kp F7         &kp F8    &kp F9     &kp F10     &kp F11    &kp F12
-			&kp LBRC     &kp PIPE    &kp EQUAL   &kp TILDE      &kp PLUS      &kp LT        &kp GT     &kp CARET     &kp AMPS   &kp PRCNT   &kp STAR   &kp RBRC
-			&kp LBKT     &kp N1      &kp N2      &kp N3          &kp N4       &kp N5        &kp N6     &kp N7        &kp N8     &kp N9      &kp N0     &kp RBKT
-			&trans   &trans          &trans        &trans       &trans &trans
+			&none &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      &none &none
+			&none &kp KP_N0   &kp KP_N4  &kp KP_N5  &kp KP_N6  &none &none &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &none
+			&none &kp KP_DOT  &kp KP_N1  &kp KP_N2  &kp KP_N3  &none &none &bt BT_CLR     &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
+			&none &none &none &none &none &none
 			>;
 		};
     #else
 		num_layer {
 			bindings = <
-			&none &none   		 &mt KP_N7 N7 &mt KP_N8 N8 &mt KP_N9 N9 &none &none &bt BT_CLR     &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
+			&none &none   		 &mt KP_N7 N7 &mt KP_N8 N8 &mt KP_N9 N9 &none &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      &none &none
 			&none &mt KP_N0 N0   &mt KP_N4 N4 &mt KP_N5 N5 &mt KP_N6 N6 &none &none &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &none
-			&none &mt KP_DOT DOT &mt KP_N1 N1 &mt KP_N2 N2 &mt KP_N3 N3 &none &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      &none &none
+			&none &mt KP_DOT DOT &mt KP_N1 N1 &mt KP_N2 N2 &mt KP_N3 N3 &none &none &bt BT_CLR     &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
 			&none &none &none &none &none &none
 			>;
 		};
