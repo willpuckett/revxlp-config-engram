@@ -1,292 +1,64 @@
-#define COMBO_RPI 175
+#define RPI 175
 
+//  ╭─────────────────────────┬─────────────────────────╮
+//  │ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
+//  │ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
+//  │ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
+//  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+//              ╰─────────────┴─────────────╯  
+//   ╭────────────────────────┬────────────────────────╮ 
+//   │  0   1   2   3   4   5 │  6   7   8   9  10  11 │ 
+//   │ 12  13  14  15  16  17 │ 18  19  20  21  22  23 │ 
+//   │ 24  25  26  27  28  29 │ 30  31  32  33  34  35 │ 
+//   ╰───────────╮ 36  37  38 │ 39  40  41 ╭───────────╯ 
+            //   ╰────────────┴────────────╯             
 / {
 	combos {
 		compatible = "zmk,combos";
-		#if LAYOUT == ENGRAMMER
-	
-		combo_minus {
-			bindings = <&kp MINUS>;
-			key-positions = <13 14>;
-			layers = <0>;
-			timeout-ms = <25>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_comma {
-			bindings = <&kp COMMA>;
-			key-positions = <14 15>;
-			layers = <0>;
-			timeout-ms = <25>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_sqt {
-			bindings = <&kp SQT>;
-			key-positions = <15 16>;
-			layers = <0>;
-			timeout-ms = <25>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_semi {
-			bindings = <&kp SEMI>;
-			key-positions = <19 20>;
-			layers = <0>;
-			timeout-ms = <25>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_dot {
-			bindings = <&kp DOT>;
-			key-positions = <20 21>;
-			layers = <0>;
-			timeout-ms = <25>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_slash {
-			bindings = <&kp SLASH>;
-			key-positions = <21 22>;
-			layers = <0>;
-			timeout-ms = <25>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		
-		#endif
-		#if LAYOUT != ENGRAM
-		combo_1 {
-			bindings = <&mt EXCL N1>;
-			key-positions = <0 12>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_2 {
-			bindings = <&mt AT N2>;
-			key-positions = <1 13>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_3 {
-			bindings = <&mt HASH N3>;
-			key-positions = <2 14>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_4 {
-			bindings = <&mt DOLLAR N4>;
-			key-positions = <3 15>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_5 {
-			bindings = <&mt PERCENT N5>;
-			key-positions = <4 16>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_6 {
-			bindings = <&mt CARET N6>;
-			key-positions = <5 17>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_7 {
-			bindings = <&mt AMPS N7>;
-			key-positions = <6 18>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_8 {
-			bindings = <&mt STAR N8>;
-			key-positions = <7 19>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_9 {
-			bindings = <&mt LPAR N9>;
-			key-positions = <8 20>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_0 {
-			bindings = <&mt RPAR N0>;
-			key-positions = <9 21>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_lbrkt {
-			bindings = <&mt LBRC LBKT>;
-			key-positions = <10 22>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_rbrkt {
-			bindings = <&mt RBRC RBKT>;
-			key-positions = <11 23>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-
-		#endif
-		#if LAYOUT == ENGRAM
-		combo_lbrkt {
-			bindings = <&mt LBRC LBKT>;
-			key-positions = <0 12>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_1 {
-			bindings = <&mt PIPE N1>;
-			key-positions = <1 13>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_2 {
-			bindings = <&mt EQUAL N2>;
-			key-positions = <2 14>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_3 {
-			bindings = <&mt TILDE N3>;
-			key-positions = <3 15>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_4 {
-			bindings = <&mt PLUS N4>;
-			key-positions = <4 16>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_5 {
-			bindings = <&mt LT N5>;
-			key-positions = <5 17>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_6 {
-			bindings = <&mt GT N6>;
-			key-positions = <6 18>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_7 {
-			bindings = <&mt CARET N7>;
-			key-positions = <7 19>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_8 {
-			bindings = <&mt AMPS N8>;
-			key-positions = <8 20>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_9 {
-			bindings = <&mt PERCENT N9>;
-			key-positions = <9 21>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_0 {
-			bindings = <&mt STAR N0>;
-			key-positions = <10 22>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_rbrkt {
-			bindings = <&mt RBRC RBKT>;
-			key-positions = <11 23>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-
-		#endif
-
-		combo_undo {
-			bindings = <&kp LG(Z)>;
-			key-positions = <13 25>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_redo {
-			bindings = <&kp LG(Z)>;
-			key-positions = <12 24>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_cut {
-			bindings = <&kp LG(X)>;
-			key-positions = <14 26>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_copy {
-			bindings = <&kp LG(C)>;
-			key-positions = <15 27>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_paste {
-			bindings = <&kp LG(V)>;
-			key-positions = <16 28>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-
-		combo_left {
-			bindings = <&mt HOME LEFT>;
-			key-positions = <19 31>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_down {
-			bindings = <&mt PG_DN DOWN>;
-			key-positions = <20 32>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_up {
-			bindings = <&mt PG_UP UP>;
-			key-positions = <21 33>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
-		combo_right {
-			bindings = <&mt END RIGHT>;
-			key-positions = <22 34>;
-			layers = <0>;
-			timeout-ms = <50>;
-			require-prior-idle-ms = <COMBO_RPI>;
-		};
+	#if LAYOUT == ENGRAMMER
+		ZMK_COMBO(minus, &kp MINUS, 13 14, 0, 25, RPI)
+		ZMK_COMBO(comma, &kp COMMA, 14 15, 0, 25, RPI)
+		ZMK_COMBO(sqt, &kp SQT, 15 16, 0, 25, RPI)
+		ZMK_COMBO(semi, &kp SEMI, 19 20, 0, 25, RPI)
+		ZMK_COMBO(dot, &kp DOT, 20 21, 0, 25, RPI)
+		ZMK_COMBO(slash, &kp SLASH, 21 22, 0, 25, RPI)
+	#endif
+	#if LAYOUT != ENGRAM
+		ZMK_COMBO(1, &mt EXCL N1, 0 12, 0, 50, RPI)
+		ZMK_COMBO(2, &mt AT N2, 1 13, 0, 50, RPI)
+		ZMK_COMBO(3, &mt HASH N3, 2 14, 0, 50, RPI)
+		ZMK_COMBO(4, &mt DOLLAR N4, 3 15, 0, 50, RPI)
+		ZMK_COMBO(5, &mt PERCENT N5, 4 16, 0, 50, RPI)
+		ZMK_COMBO(6, &mt CARET N6, 5 17, 0, 50, RPI)
+		ZMK_COMBO(7, &mt AMPS N7, 6 18, 0, 50, RPI)
+		ZMK_COMBO(8, &mt STAR N8, 7 19, 0, 50, RPI)
+		ZMK_COMBO(9, &mt LPAR N9, 8 20, 0, 50, RPI)
+		ZMK_COMBO(0, &mt RPAR N0, 9 21, 0, 50, RPI)
+		ZMK_COMBO(lbrkt, &mt LBRC LBKT, 10 22, 0, 50, RPI) 
+        ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
+	#endif
+	#if LAYOUT == ENGRAM
+		ZMK_COMBO(lbrkt, &mt LBRC LBKT, 0 12, 0, 50, RPI)
+		ZMK_COMBO(1, &mt PIPE N1, 1 13, 0, 50, RPI)
+		ZMK_COMBO(2, &mt EQUAL N2, 2 14, 0, 50, RPI)
+		ZMK_COMBO(3, &mt TILDE N3, 3 15, 0, 50, RPI)
+		ZMK_COMBO(4, &mt PLUS N4, 4 16, 0, 50, RPI)
+		ZMK_COMBO(5, &mt LT N5, 5 17, 0, 50, RPI)
+		ZMK_COMBO(6, &mt GT N6, 6 18, 0, 50, RPI)
+		ZMK_COMBO(7, &mt CARET N7, 7 19, 0, 50, RPI)
+		ZMK_COMBO(8, &mt AMPS N8, 8 20, 0, 50, RPI)
+		ZMK_COMBO(9, &mt PERCENT N9, 9 21, 0, 50, RPI)
+		ZMK_COMBO(0, &mt STAR N0, 10 22, 0, 50, RPI) 
+        ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
+	#endif
+		ZMK_COMBO(undo, &kp LG(Z), 13 25, 0, 50, RPI)
+		ZMK_COMBO(redo, &kp LG(Z), 12 24, 0, 50, RPI)
+		ZMK_COMBO(cut, &kp LG(X), 14 26, 0, 50, RPI)
+		ZMK_COMBO(copy, &kp LG(C), 15 27, 0, 50, RPI) 
+        ZMK_COMBO(paste, &kp LG(V), 16 28, 0, 50, RPI)
+		ZMK_COMBO(left, &mt HOME LEFT, 19 31, 0, 50, RPI)
+		ZMK_COMBO(down, &mt PG_DN DOWN, 20 32, 0, 50, RPI)
+		ZMK_COMBO(up, &mt PG_UP UP, 21 33, 0, 50, RPI) 
+        ZMK_COMBO(right, &mt END RIGHT, 22 34, 0, 50, RPI)
 	};
 };
