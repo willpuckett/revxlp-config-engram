@@ -713,7 +713,7 @@
     #if LAYOUT == ENGRAM
 		engram_layer {
 			bindings = <
-			&mt F1 ESC         &mt F2 B        &mt F3 Y       &mt F4 O       &mt F5 U    &sqt_lpar      &dqt_rpar       &mt F8 L          &mt F9 D       &mt F10 W       &mt F11 V         &mt F12 Z
+			&mqt1 ESC         &mqt2 B        &mqt F3 Y       &mqt F4 O       &mqt F5 U    &sqt_lpar      &dqt_rpar       &mqt F8 L          &mqt F9 D       &mqt F10 W       &mqt F11 V         &mqt F12 Z
 			&hash_buck   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cma_semi   &stop_colon     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
 			&at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
@@ -722,7 +722,7 @@
 		#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
 			bindings = <
-			&mt F1 TILDE &mt F2 B         &mt F3 Y           &mt F4 O       &mt 5 U        &mt F6 SQT &mt F7 SEMI  &mt F8 L        &mt F9 D      &mt F10 W      &mt F11 V       &mt F12 Z
+			&mqt F1 TILDE &mqt F2 B         &mqt F3 Y           &mqt F4 O       &mt 5 U        &mqt F6 SQT &mqt F7 SEMI  &mqt F8 L        &mqt F9 D      &mqt F10 W      &mqt F11 V       &mqt F12 Z
 			&cwe &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
 			&kp BSLH &kp G         &kp X      	    &kp J       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
@@ -731,7 +731,7 @@
 		#elif LAYOUT == QWERTY_FLIP
 		qwerty_flip_layer {
 			bindings = <
-			&mt F1 GRAVE &mt F2 Q  &mt F3 W   &mt F4 D   &mt F5 F     &mt F6 G    &mt F7 Y &mt F8 J   &mt F9 K  &mt F10 L  &mt F11 SEMI &mt F12 BSLH
+			&mqt F1 GRAVE &mqt F2 Q  &mqt F3 W   &mqt F4 D   &mqt F5 F     &mqt F6 G    &mqt F7 Y &mqt F8 J   &mqt F9 K  &mqt F10 L  &mqt F11 SEMI &mqt F12 BSLH
 			&cwe      &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T       &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
 			&kp MINUS &kp Z          &kp X        &kp C        &kp V          &kp B       &kp N &kp M          &kp COMMA    &kp DOT      &kp SLASH     &kp EQUAL
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
@@ -740,7 +740,7 @@
     #else
 		qwerty_layer {
 			bindings = <
-			&mt F1 GRAVE &mt F2 Q       &mt F3 W      &mt F4 E       &mt F5 R        &mt F6 T &mt F7 Y &mt F8 U        &mt F9 I      &mt F10 O      &mt F11 P          &mt F12 BSLH
+			&mqt F1 GRAVE &mqt F2 Q       &mqt F3 W      &mqt F4 E       &mqt F5 R        &mqt F6 T &mqt F7 Y &mqt F8 U        &mqt F9 I      &mqt F10 O      &mqt F11 P          &mqt F12 BSLH
 			&cwe      &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
 			&kp MINUS &kp Z       &kp X      &kp C       &kp V        &kp B &kp N &kp M        &kp COMMA  &kp DOT    &kp SLASH      &kp EQUAL
 			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
