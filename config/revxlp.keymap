@@ -659,6 +659,13 @@
 			require-prior-idle-ms = <175>;
 			bindings = <&kp LG(Z)>;
 		};
+		combo_redo {
+			timeout-ms = <50>;
+			key-positions = <12 24>;
+			layers = <0>;
+			require-prior-idle-ms = <175>;
+			bindings = <&kp LG(Z)>;
+		};
 		combo_cut {
 			timeout-ms = <50>;
 			key-positions = <14 26>;

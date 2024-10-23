@@ -387,39 +387,45 @@ path.combo {
 </text>
 </g>
 <g class="combo combopos-13">
+<rect rx="6" ry="6" x="16" y="99" width="28" height="26" class="combo"/>
+<text x="30" y="112" class="combo tap">
+<tspan x="30" dy="-0.6em">Gui+</tspan><tspan x="30" dy="1.2em">Z</tspan>
+</text>
+</g>
+<g class="combo combopos-14">
 <rect rx="6" ry="6" x="136" y="99" width="28" height="26" class="combo"/>
 <text x="150" y="112" class="combo tap">
 <tspan x="150" dy="-0.6em">Gui+</tspan><tspan x="150" dy="1.2em">X</tspan>
 </text>
 </g>
-<g class="combo combopos-14">
+<g class="combo combopos-15">
 <rect rx="6" ry="6" x="196" y="99" width="28" height="26" class="combo"/>
 <text x="210" y="112" class="combo tap">
 <tspan x="210" dy="-0.6em">Gui+</tspan><tspan x="210" dy="1.2em">C</tspan>
 </text>
 </g>
-<g class="combo combopos-15">
+<g class="combo combopos-16">
 <rect rx="6" ry="6" x="256" y="99" width="28" height="26" class="combo"/>
 <text x="270" y="112" class="combo tap">
 <tspan x="270" dy="-0.6em">Gui+</tspan><tspan x="270" dy="1.2em">V</tspan>
 </text>
 </g>
-<g class="combo combopos-16">
+<g class="combo combopos-17">
 <rect rx="6" ry="6" x="526" y="99" width="28" height="26" class="combo"/>
 <text x="540" y="112" class="combo tap">LEFT</text>
 <text x="540" y="123" class="combo hold">HOME</text>
 </g>
-<g class="combo combopos-17">
+<g class="combo combopos-18">
 <rect rx="6" ry="6" x="586" y="99" width="28" height="26" class="combo"/>
 <text x="600" y="112" class="combo tap">DOWN</text>
 <text x="600" y="123" class="combo hold">PG DN</text>
 </g>
-<g class="combo combopos-18">
+<g class="combo combopos-19">
 <rect rx="6" ry="6" x="646" y="99" width="28" height="26" class="combo"/>
 <text x="660" y="112" class="combo tap">UP</text>
 <text x="660" y="123" class="combo hold">PG UP</text>
 </g>
-<g class="combo combopos-19">
+<g class="combo combopos-20">
 <rect rx="6" ry="6" x="706" y="99" width="28" height="26" class="combo"/>
 <text x="720" y="112" class="combo tap">RIGHT</text>
 <text x="720" y="123" class="combo hold">END</text>
