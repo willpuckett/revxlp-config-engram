@@ -726,25 +726,25 @@
 			&rpi F1 ESC         &rpi F2 B        &rpi F3 Y       &rpi F4 O       &rpi F5 U    &sqt_lpar      &dqt_rpar       &rpi F8 L          &rpi F9 D       &rpi F10 W       &rpi F11 V         &rpi F12 Z
 			&hash_buck   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cma_semi   &stop_colon     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
 			&at_til      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmark_excl     &kp R          &kp M       &kp F       &kp P         &slsh
-			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
+			&caps_word &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
 			>;
 		};
 		#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
 			bindings = <
 			&rpi F1 TILDE &rpi F2 J         &rpi F3 Y           &rpi F4 O       &mt 5 U        &rpi F6 SQT &rpi F7 SEMI  &rpi F8 L        &rpi F9 D      &rpi F10 W      &rpi F11 X       &rpi F12 Z
-			&cwe &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
+			&caps_word &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
 			&kp BSLH &kp G         &kp B      	    &kp V       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
-			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
+			&kp ESC &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
 			>;
 		};
 		#elif LAYOUT == QWERTY_FLIP
 		qwerty_flip_layer {
 			bindings = <
 			&rpi F1 GRAVE &rpi F2 Q  &rpi F3 W   &rpi F4 D   &rpi F5 F     &rpi F6 G    &rpi F7 Y &rpi F8 J   &rpi F9 K  &rpi F10 L  &rpi F11 SEMI &rpi F12 BSLH
-			&cwe      &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T       &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
+			&caps_word      &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T       &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
 			&kp MINUS &kp Z          &kp X        &kp C        &kp V          &kp B       &kp N &kp M          &kp COMMA    &kp DOT      &kp SLASH     &kp EQUAL
-			&none &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
+			&kp ESC &mqt NUM_L TAB &mqt NUM_L BSPC &mqt NUM_L SPACE &mqt NUM_L RETURN &none
 			>;
 		};
     #else
