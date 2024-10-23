@@ -1,0 +1,292 @@
+#define COMBO_RPI 175
+
+/ {
+	combos {
+		compatible = "zmk,combos";
+		#if LAYOUT == ENGRAMMER
+	
+		combo_minus {
+			bindings = <&kp MINUS>;
+			key-positions = <13 14>;
+			layers = <0>;
+			timeout-ms = <25>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_comma {
+			bindings = <&kp COMMA>;
+			key-positions = <14 15>;
+			layers = <0>;
+			timeout-ms = <25>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_sqt {
+			bindings = <&kp SQT>;
+			key-positions = <15 16>;
+			layers = <0>;
+			timeout-ms = <25>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_semi {
+			bindings = <&kp SEMI>;
+			key-positions = <19 20>;
+			layers = <0>;
+			timeout-ms = <25>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_dot {
+			bindings = <&kp DOT>;
+			key-positions = <20 21>;
+			layers = <0>;
+			timeout-ms = <25>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_slash {
+			bindings = <&kp SLASH>;
+			key-positions = <21 22>;
+			layers = <0>;
+			timeout-ms = <25>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		
+		#endif
+		#if LAYOUT != ENGRAM
+		combo_1 {
+			bindings = <&mt EXCL N1>;
+			key-positions = <0 12>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_2 {
+			bindings = <&mt AT N2>;
+			key-positions = <1 13>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_3 {
+			bindings = <&mt HASH N3>;
+			key-positions = <2 14>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_4 {
+			bindings = <&mt DOLLAR N4>;
+			key-positions = <3 15>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_5 {
+			bindings = <&mt PERCENT N5>;
+			key-positions = <4 16>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_6 {
+			bindings = <&mt CARET N6>;
+			key-positions = <5 17>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_7 {
+			bindings = <&mt AMPS N7>;
+			key-positions = <6 18>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_8 {
+			bindings = <&mt STAR N8>;
+			key-positions = <7 19>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_9 {
+			bindings = <&mt LPAR N9>;
+			key-positions = <8 20>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_0 {
+			bindings = <&mt RPAR N0>;
+			key-positions = <9 21>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_lbrkt {
+			bindings = <&mt LBRC LBKT>;
+			key-positions = <10 22>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_rbrkt {
+			bindings = <&mt RBRC RBKT>;
+			key-positions = <11 23>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+
+		#endif
+		#if LAYOUT == ENGRAM
+		combo_lbrkt {
+			bindings = <&mt LBRC LBKT>;
+			key-positions = <0 12>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_1 {
+			bindings = <&mt PIPE N1>;
+			key-positions = <1 13>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_2 {
+			bindings = <&mt EQUAL N2>;
+			key-positions = <2 14>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_3 {
+			bindings = <&mt TILDE N3>;
+			key-positions = <3 15>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_4 {
+			bindings = <&mt PLUS N4>;
+			key-positions = <4 16>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_5 {
+			bindings = <&mt LT N5>;
+			key-positions = <5 17>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_6 {
+			bindings = <&mt GT N6>;
+			key-positions = <6 18>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_7 {
+			bindings = <&mt CARET N7>;
+			key-positions = <7 19>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_8 {
+			bindings = <&mt AMPS N8>;
+			key-positions = <8 20>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_9 {
+			bindings = <&mt PERCENT N9>;
+			key-positions = <9 21>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_0 {
+			bindings = <&mt STAR N0>;
+			key-positions = <10 22>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_rbrkt {
+			bindings = <&mt RBRC RBKT>;
+			key-positions = <11 23>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+
+		#endif
+
+		combo_undo {
+			bindings = <&kp LG(Z)>;
+			key-positions = <13 25>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_redo {
+			bindings = <&kp LG(Z)>;
+			key-positions = <12 24>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_cut {
+			bindings = <&kp LG(X)>;
+			key-positions = <14 26>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_copy {
+			bindings = <&kp LG(C)>;
+			key-positions = <15 27>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_paste {
+			bindings = <&kp LG(V)>;
+			key-positions = <16 28>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+
+		combo_left {
+			bindings = <&mt HOME LEFT>;
+			key-positions = <19 31>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_down {
+			bindings = <&mt PG_DN DOWN>;
+			key-positions = <20 32>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_up {
+			bindings = <&mt PG_UP UP>;
+			key-positions = <21 33>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+		combo_right {
+			bindings = <&mt END RIGHT>;
+			key-positions = <22 34>;
+			layers = <0>;
+			timeout-ms = <50>;
+			require-prior-idle-ms = <COMBO_RPI>;
+		};
+	};
+};
