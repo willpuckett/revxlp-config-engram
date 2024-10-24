@@ -28,7 +28,7 @@ These maps were made with the awesome
 [keymap drawer](https://keymap-drawer.streamlit.app) by caksoylar.
 
 > [!NOTE]
-> All layouts implement F1-F12 as hold taps on the top row, but they are obscured by the number combo graphics.
+> The combos obscure some information. CAGS home row mods are available. The top row correllates to function keys (left to right): F11, F1-F10, F12.
 
 <details>
 <summary>
