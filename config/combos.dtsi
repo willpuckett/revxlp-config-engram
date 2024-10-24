@@ -54,7 +54,7 @@
 #endif
 
 // Clipboard
-ZMK_COMBO(undo, &kp LG(Z), 13 25, ALL, 50, RPI)
+ZMK_COMBO(undo, &kp LS(LG(Z)), 13 25, ALL, 50, RPI)
 ZMK_COMBO(redo, &kp LG(Z), 12 24, ALL, 50, RPI)
 ZMK_COMBO(cut, &kp LG(X), 14 26, ALL, 50, RPI)
 ZMK_COMBO(copy, &kp LG(C), 15 27, ALL, 50, RPI) 
