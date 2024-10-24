@@ -1,9 +1,9 @@
 #define RPI 175
 
-#define QWERTY 0
-#define QWERTY_FLIP 1
-#define ENGRAM 2
-#define ENGRAMMER 3
+// #define QWERTY 0
+// #define QWERTY_FLIP 1
+// #define ENGRAM 2
+// #define ENGRAMMER 3
 
 //  ╭─────────────────────────┬─────────────────────────╮
 //  │ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
@@ -27,46 +27,51 @@
 	ZMK_COMBO(dot, &mt GT DOT, 20 21, 0, 25, RPI)
 	ZMK_COMBO(slash, &mt QMARK SLASH, 21 22, 0, 25, RPI)
 	ZMK_COMBO(caps_word, &caps_word, LM1 RM1, 0, 25, RPI)
+	ZMK_COMBO(equl, &mt PLUS EQUAL, RT2 RT3, 0, 25, RPI)
+	ZMK_COMBO(bslh, &mt PIPE BSLH, LT2 LT3, 0, 25, RPI)
 #endif
 
 // Numbers
+	ZMK_COMBO(lbkt, &mt LBRC LBKT, LM0 LB0, 0, 50, RPI)
+	ZMK_COMBO(rbkt, &mt RBRC RBKT, RM0 RB0, 0, 50, RPI)
 #if LAYOUT == ENGRAM
-	ZMK_COMBO(lbrkt, &mt LBRC LBKT, 0 12, 0, 50, RPI)
-	ZMK_COMBO(1, &mt PIPE N1, 1 13, 0, 50, RPI)
-	ZMK_COMBO(2, &mt EQUAL N2, 2 14, 0, 50, RPI)
-	ZMK_COMBO(3, &mt TILDE N3, 3 15, 0, 50, RPI)
-	ZMK_COMBO(4, &mt PLUS N4, 4 16, 0, 50, RPI)
-	ZMK_COMBO(5, &mt LT N5, 5 17, 0, 50, RPI)
-	ZMK_COMBO(6, &mt GT N6, 6 18, 0, 50, RPI)
-	ZMK_COMBO(7, &mt CARET N7, 7 19, 0, 50, RPI)
-	ZMK_COMBO(8, &mt AMPS N8, 8 20, 0, 50, RPI)
-	ZMK_COMBO(9, &mt PERCENT N9, 9 21, 0, 50, RPI)
-	ZMK_COMBO(0, &mt STAR N0, 10 22, 0, 50, RPI) 
-	ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
+	ZMK_COMBO(1, &mt PIPE N1, 1 13, All, 50, RPI)
+	ZMK_COMBO(2, &mt EQUAL N2, 2 14, All, 50, RPI)
+	ZMK_COMBO(3, &mt TILDE N3, 3 15, All, 50, RPI)
+	ZMK_COMBO(4, &mt PLUS N4, 4 16, All, 50, RPI)
+	ZMK_COMBO(5, &mt LT N5, 5 17, All, 50, RPI)
+	ZMK_COMBO(6, &mt GT N6, 6 18, All, 50, RPI)
+	ZMK_COMBO(7, &mt CARET N7, 7 19, All, 50, RPI)
+	ZMK_COMBO(8, &mt AMPS N8, 8 20, All, 50, RPI)
+	ZMK_COMBO(9, &mt PERCENT N9, 9 21, All, 50, RPI)
+	ZMK_COMBO(0, &mt STAR N0, 10 22, All, 50, RPI) 
 #else	
-	ZMK_COMBO(lbrkt, &mt LBRC LBKT, 0 12, 0, 50, RPI)
-	ZMK_COMBO(1, &mt EXCL N1, 1 13, 0, 50, RPI)
-	ZMK_COMBO(2, &mt AT N2, 2 14, 0, 50, RPI)
-	ZMK_COMBO(3, &mt HASH N3, 3 15, 0, 50, RPI)
-	ZMK_COMBO(4, &mt DOLLAR N4, 4 16, 0, 50, RPI)
-	ZMK_COMBO(5, &mt PERCENT N5, 5 17, 0, 50, RPI)
-	ZMK_COMBO(6, &mt CARET N6, 6 18, 0, 50, RPI)
-	ZMK_COMBO(7, &mt AMPS N7, 7 19, 0, 50, RPI)
-	ZMK_COMBO(8, &mt STAR N8, 8 20, 0, 50, RPI)
-	ZMK_COMBO(9, &mt LPAR N9, 9 21, 0, 50, RPI)
-	ZMK_COMBO(0, &mt RPAR N0, 10 22, 0, 50, RPI) 
-	ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
+	ZMK_COMBO(1, &mt EXCL N1, 1 13, All, 50, RPI)
+	ZMK_COMBO(2, &mt AT N2, 2 14, All, 50, RPI)
+	ZMK_COMBO(3, &mt HASH N3, 3 15, All, 50, RPI)
+	ZMK_COMBO(4, &mt DOLLAR N4, 4 16, All, 50, RPI)
+	ZMK_COMBO(5, &mt PERCENT N5, 5 17, All, 50, RPI)
+	ZMK_COMBO(6, &mt CARET N6, 6 18, All, 50, RPI)
+	ZMK_COMBO(7, &mt AMPS N7, 7 19, All, 50, RPI)
+	ZMK_COMBO(8, &mt STAR N8, 8 20, All, 50, RPI)
+	ZMK_COMBO(9, &mt LPAR N9, 9 21, All, 50, RPI)
+	ZMK_COMBO(0, &mt RPAR N0, 10 22, All, 50, RPI) 
 #endif
 
 // Clipboard
-ZMK_COMBO(undo, &kp LG(Z), 13 25, 0, 50, RPI)
-ZMK_COMBO(redo, &kp LG(Z), 12 24, 0, 50, RPI)
-ZMK_COMBO(cut, &kp LG(X), 14 26, 0, 50, RPI)
-ZMK_COMBO(copy, &kp LG(C), 15 27, 0, 50, RPI) 
-ZMK_COMBO(paste, &kp LG(V), 16 28, 0, 50, RPI)
+ZMK_COMBO(undo, &kp LG(Z), 13 25, All, 50, RPI)
+ZMK_COMBO(redo, &kp LG(Z), 12 24, All, 50, RPI)
+ZMK_COMBO(cut, &kp LG(X), 14 26, All, 50, RPI)
+ZMK_COMBO(copy, &kp LG(C), 15 27, All, 50, RPI) 
+ZMK_COMBO(paste, &kp LG(V), 16 28, All, 50, RPI)
 
 // Navigation
-ZMK_COMBO(left, &mt HOME LEFT, 19 31, 0, 50, RPI)
-ZMK_COMBO(down, &mt PG_DN DOWN, 20 32, 0, 50, RPI)
-ZMK_COMBO(up, &mt PG_UP UP, 21 33, 0, 50, RPI) 
-ZMK_COMBO(right, &mt END RIGHT, 22 34, 0, 50, RPI)
+ZMK_COMBO(left, &mt HOME LEFT, 19 31, All, 50, RPI)
+ZMK_COMBO(down, &mt PG_DN DOWN, 20 32, All, 50, RPI)
+ZMK_COMBO(up, &mt PG_UP UP, 21 33, All, 50, RPI) 
+ZMK_COMBO(right, &mt END RIGHT, 22 34, All, 50, RPI)
+
+// Bluetooth
+ZMK_COMBO(bl_clear, &bt BT_CLR, RT5 RM5, NUM_L, 50, RPI)
+ZMK_COMBO(bl_next, &bt BT_NXT, RM5 RB5, NUM_L, 50, RPI)
+ZMK_COMBO(out_tog, &out OUT_TOG, LT5 LM5, NUM_L, 50, RPI)
