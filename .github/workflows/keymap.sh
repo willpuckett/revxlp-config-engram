@@ -22,6 +22,7 @@ for l in "${!LAYOUTS[@]}"; do
     YML="$BASE.yml"
     echo $KMD_LAYOUT
     # note you have to have the quotes for KMD_LAYOUT expansion
+    KEYMAP_zmk_additional_includes="zmk-helpers"
     KEYMAP_zmk_preamble="#define LAYOUT $l" keymap parse -c $COLS -z "$KEYMAP" >"$YML" &&
         keymap draw "${KMD_LAYOUT[@]}" "$YML" >"$BASE.svg"
     [[ $? -ne 0 ]] && exit 1
