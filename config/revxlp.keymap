@@ -14,6 +14,7 @@
 #include <behaviors/num_word.dtsi>
 #include "engram.dtsi"
 #include "taps.dtsi"
+#include "combos.dtsi"
 
 #ifndef LAYOUT
 #define LAYOUT 0
