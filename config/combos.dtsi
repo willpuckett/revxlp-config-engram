@@ -27,8 +27,8 @@
 #endif
 
 // Numbers
-	ZMK_COMBO(lbkt, &mt LBRC LBKT, LM0 LB0, 0, 50, RPI)
-	ZMK_COMBO(rbkt, &mt RBRC RBKT, RM0 RB0, 0, 50, RPI)
+	ZMK_COMBO(lbkt, &mt LBRC LBKT, LT5 LM5, 0, 50, RPI)
+	ZMK_COMBO(rbkt, &mt RBRC RBKT, RT5 RM5, 0, 50, RPI)
 #if LAYOUT == ENGRAM
 	ZMK_COMBO(1, &mt PIPE N1, 1 13, ALL, 50, RPI)
 	ZMK_COMBO(2, &mt EQUAL N2, 2 14, ALL, 50, RPI)
@@ -54,8 +54,8 @@
 #endif
 
 // Clipboard
-ZMK_COMBO(undo, &kp LS(LG(Z)), 13 25, ALL, 50, RPI)
-ZMK_COMBO(redo, &kp LG(Z), 12 24, ALL, 50, RPI)
+ZMK_COMBO(redo, &kp LS(LG(Z)), 12 24, ALL, 50, RPI)
+ZMK_COMBO(undo, &kp LG(Z), 13 25, ALL, 50, RPI)
 ZMK_COMBO(cut, &kp LG(X), 14 26, ALL, 50, RPI)
 ZMK_COMBO(copy, &kp LG(C), 15 27, ALL, 50, RPI) 
 ZMK_COMBO(paste, &kp LG(V), 16 28, ALL, 50, RPI)
@@ -67,6 +67,6 @@ ZMK_COMBO(up, &mt PG_UP UP, 21 33, ALL, 50, RPI)
 ZMK_COMBO(right, &mt END RIGHT, 22 34, ALL, 50, RPI)
 
 // Bluetooth
-ZMK_COMBO(bl_clear, &bt BT_CLR, RT5 RM5, NUM_L, 50, RPI)
+ZMK_COMBO(bl_clear, &bt BT_CLR, RM0 RB0, NUM_L, 50, RPI)
 ZMK_COMBO(bl_next, &bt BT_NXT, RM5 RB5, NUM_L, 50, RPI)
 ZMK_COMBO(out_tog, &out OUT_TOG, LT5 LM5, NUM_L, 50, RPI)
