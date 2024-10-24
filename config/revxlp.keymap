@@ -43,7 +43,7 @@
 	#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
 			bindings = <
-			&rpi F1 GRAVE &rpi F2 J         &rpi F3 Y           &rpi F4 O       &mt 5 U        &rpi F6 SQT &rpi F7 SEMI  &rpi F8 L        &rpi F9 D      &rpi F10 W      &rpi F11 X       &rpi F12 Z
+			&rpi F11 GRAVE &rpi F1 J         &rpi F2 Y           &rpi F3 O       &mt F4 U        &rpi F5 SQT &rpi F6 SEMI  &rpi F7 L        &rpi F8 D      &rpi F9 W      &rpi F10 X       &rpi F12 Z
 			&caps_word &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
 			&kp BSLH &kp G         &kp B      	    &kp V       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
 			&mqt NUM_L ESC &kp TAB &kp BSPC &kp SPACE &kp RETURN &num_word NUM_L

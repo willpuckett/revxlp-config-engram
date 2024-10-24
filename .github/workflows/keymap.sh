@@ -8,7 +8,7 @@ KEYMAP="config/${PROJECT}.keymap"
 # for info on cols-thumbs notation
 COLS_THUMBS='333333+3> 3<+333333'
 # Or, pick a keyboard from https://config.qmk.fm
-QMK_KEYBOARD=""
+QMK_KEYBOARD="splitkb/aurora/corne/rev1"
 
 # Store the flag and variable in an array to expand 
 # each element as a seperate shell word in the command later....

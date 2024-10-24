@@ -1,4 +1,5 @@
 #define RPI 175
+
 #define QWERTY 0
 #define QWERTY_FLIP 1
 #define ENGRAM 2
@@ -28,22 +29,6 @@
 #endif
 
 // Numbers
-#if LAYOUT != ENGRAM
-	ZMK_COMBO(1, &mt EXCL N1, 0 12, 0, 50, RPI)
-	ZMK_COMBO(2, &mt AT N2, 1 13, 0, 50, RPI)
-	ZMK_COMBO(3, &mt HASH N3, 2 14, 0, 50, RPI)
-	ZMK_COMBO(4, &mt DOLLAR N4, 3 15, 0, 50, RPI)
-	ZMK_COMBO(5, &mt PERCENT N5, 4 16, 0, 50, RPI)
-	ZMK_COMBO(6, &mt CARET N6, 5 17, 0, 50, RPI)
-	ZMK_COMBO(7, &mt AMPS N7, 6 18, 0, 50, RPI)
-	ZMK_COMBO(8, &mt STAR N8, 7 19, 0, 50, RPI)
-	ZMK_COMBO(9, &mt LPAR N9, 8 20, 0, 50, RPI)
-	ZMK_COMBO(0, &mt RPAR N0, 9 21, 0, 50, RPI)
-	ZMK_COMBO(lbrkt, &mt LBRC LBKT, 10 22, 0, 50, RPI) 
-	ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
-#endif
-
-// Engram Numbers
 #if LAYOUT == ENGRAM
 	ZMK_COMBO(lbrkt, &mt LBRC LBKT, 0 12, 0, 50, RPI)
 	ZMK_COMBO(1, &mt PIPE N1, 1 13, 0, 50, RPI)
@@ -56,6 +41,19 @@
 	ZMK_COMBO(8, &mt AMPS N8, 8 20, 0, 50, RPI)
 	ZMK_COMBO(9, &mt PERCENT N9, 9 21, 0, 50, RPI)
 	ZMK_COMBO(0, &mt STAR N0, 10 22, 0, 50, RPI) 
+	ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
+#else	
+	ZMK_COMBO(lbrkt, &mt LBRC LBKT, 0 12, 0, 50, RPI)
+	ZMK_COMBO(1, &mt EXCL N1, 1 13, 0, 50, RPI)
+	ZMK_COMBO(2, &mt AT N2, 2 14, 0, 50, RPI)
+	ZMK_COMBO(3, &mt HASH N3, 3 15, 0, 50, RPI)
+	ZMK_COMBO(4, &mt DOLLAR N4, 4 16, 0, 50, RPI)
+	ZMK_COMBO(5, &mt PERCENT N5, 5 17, 0, 50, RPI)
+	ZMK_COMBO(6, &mt CARET N6, 6 18, 0, 50, RPI)
+	ZMK_COMBO(7, &mt AMPS N7, 7 19, 0, 50, RPI)
+	ZMK_COMBO(8, &mt STAR N8, 8 20, 0, 50, RPI)
+	ZMK_COMBO(9, &mt LPAR N9, 9 21, 0, 50, RPI)
+	ZMK_COMBO(0, &mt RPAR N0, 10 22, 0, 50, RPI) 
 	ZMK_COMBO(rbrkt, &mt RBRC RBKT, 11 23, 0, 50, RPI)
 #endif
 
