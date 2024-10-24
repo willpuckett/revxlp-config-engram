@@ -53,6 +53,11 @@
 	ZMK_COMBO(0, &mt RPAR N0, 10 22, ALL, 50, RPI) 
 #endif
 
+// Section Symbol
+if LAYOUT == QWERTY || LAYOUT == QWERTY_FLIP
+	ZMK_COMBO(sect, &kp LA(6), LM0 LB0, ALL, 50, RPI)
+#endif
+
 // Clipboard
 ZMK_COMBO(redo, &kp LS(LG(Z)), 12 24, ALL, 50, RPI)
 ZMK_COMBO(undo, &kp LG(Z), 13 25, ALL, 50, RPI)
