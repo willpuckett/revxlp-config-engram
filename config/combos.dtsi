@@ -54,7 +54,7 @@
 #endif
 
 // Section Symbol
-if LAYOUT == QWERTY || LAYOUT == QWERTY_FLIP
+#if LAYOUT == QWERTY || LAYOUT == QWERTY_FLIP
 	ZMK_COMBO(sect, &kp LA(6), LM0 LB0, ALL, 50, RPI)
 #endif
 
