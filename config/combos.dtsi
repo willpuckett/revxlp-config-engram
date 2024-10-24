@@ -20,12 +20,12 @@
 
 // Engrammer center column rotated on to home row
 #if LAYOUT == ENGRAMMER
-	ZMK_COMBO(minus, &kp MINUS, 13 14, 0, 25, RPI)
-	ZMK_COMBO(comma, &kp COMMA, 14 15, 0, 25, RPI)
-	ZMK_COMBO(sqt, &kp SQT, 15 16, 0, 25, RPI)
-	ZMK_COMBO(semi, &kp SEMI, 19 20, 0, 25, RPI)
-	ZMK_COMBO(dot, &kp DOT, 20 21, 0, 25, RPI)
-	ZMK_COMBO(slash, &kp SLASH, 21 22, 0, 25, RPI)
+	ZMK_COMBO(minus, &mt UNDER MINUS, 13 14, 0, 25, RPI)
+	ZMK_COMBO(comma, &mt LT COMMA, 14 15, 0, 25, RPI)
+	ZMK_COMBO(sqt, &mt DQT SQT, 15 16, 0, 25, RPI)
+	ZMK_COMBO(semi, &mt COLON SEMI, 19 20, 0, 25, RPI)
+	ZMK_COMBO(dot, &mt GT DOT, 20 21, 0, 25, RPI)
+	ZMK_COMBO(slash, &mt QMARK SLASH, 21 22, 0, 25, RPI)
 	ZMK_COMBO(caps_word, &caps_word, LM1 RM1, 0, 25, RPI)
 #endif
 
