@@ -774,21 +774,19 @@ path.combo {
 </text>
 </g>
 <g class="combo combopos-22">
-<path d="M719,103 l-169,-55" class="combo"/>
-<path d="M719,103 l75,2" class="combo"/>
-<path d="M719,103 l78,48" class="combo"/>
-<rect rx="6" ry="6" x="705" y="90" width="28" height="26" class="combo"/>
-<text x="719" y="103" class="combo tap">
-<tspan x="719" dy="-0.6em">BT</tspan><tspan x="719" dy="1.2em">NXT</tspan>
+<path d="M812,105 l0,-37" class="combo"/>
+<path d="M812,105 l0,37" class="combo"/>
+<rect rx="6" ry="6" x="798" y="92" width="28" height="26" class="combo"/>
+<text x="812" y="105" class="combo tap">
+<tspan x="812" dy="-0.6em">BT</tspan><tspan x="812" dy="1.2em">NXT</tspan>
 </text>
 </g>
 <g class="combo combopos-23">
-<path d="M383,98 l132,-49" class="combo"/>
-<path d="M383,98 l-56,0" class="combo"/>
-<path d="M383,98 l-60,45" class="combo"/>
-<rect rx="6" ry="6" x="369" y="85" width="28" height="26" class="combo"/>
-<text x="383" y="98" class="combo tap">
-<tspan x="383" dy="-0.6em">OUT</tspan><tspan x="383" dy="1.2em">TOG</tspan>
+<path d="M308,98 l0,-37" class="combo"/>
+<path d="M308,98 l0,37" class="combo"/>
+<rect rx="6" ry="6" x="294" y="85" width="28" height="26" class="combo"/>
+<text x="308" y="98" class="combo tap">
+<tspan x="308" dy="-0.6em">OUT</tspan><tspan x="308" dy="1.2em">TOG</tspan>
 </text>
 </g>
 </g>
