@@ -34,36 +34,36 @@
     #if LAYOUT == ENGRAM
 		engram_layer {
 			bindings = <
-			&rpi F1 ESC         &rpi F2 B        &rpi F3 Y       &rpi F4 O       &rpi F5 U    &sqlp      &dqrp       &rpi F8 L          &rpi F9 D       &rpi F10 W       &rpi F11 V         &rpi F12 Z
-			&habu   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cmse   &stco     &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
-			&atti      &kp G        &kp X       &kp J       &kp K          &kp MINUS   &qmex     &kp R          &kp M       &kp F       &kp P         &slsh
+			&rpi F1 ESC &rpi F2 B    &rpi F3 Y   &rpi F4 O   &rpi F5 U    &sqlp  &dqrp   &rpi F8 L  &rpi F9 D   &rpi F10 W   &rpi F11 V &rpi F12 Z
+			&habu   &hl LCTRL C  &hl LALT I  &hl LGUI E &hls LSHFT A   &cmse   &stco &hrs RSHFT H   &hr RGUI T &hr RALT S &hr RCTRL N  &kp Q
+			&atti  &kp G    &kp X   &kp J   &kp K  &kp MINUS   &qmex &kp R  &kp M   &kp F   &kp P &slsh
 			&caps_word &kp TAB &kp BSPC &kp SPACE &kp RETURN &num_word NUM_L
 			>;
 		}; 
 	#elif LAYOUT == ENGRAMMER
 		engrammer_layer {
 			bindings = <
-			&rpi F11 GRAVE &rpi F1 J         &rpi F2 Y           &rpi F3 O       &mt F4 U        &rpi F5 SQT &rpi F6 SEMI  &rpi F7 L        &rpi F8 D      &rpi F9 W      &rpi F10 X       &rpi F12 Z
-			&caps_word &hl LCTRL C   &hl LALT I      &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
-			&kp BSLH &kp G         &kp B      	    &kp V       &kp K        &kp MINUS &kp SLASH  &kp R        &kp M      &kp F      &kp P       &kp EQUAL
+			&rpi F11 GRAVE &rpi F1 Q &rpi F2 Y   &rpi F3 O   &mt F4 U    &rpi F5 SQT &rpi F6 SEMI  &rpi F7 L    &rpi F8 D  &rpi F9 W  &rpi F10 Z &rpi F12 C_PP 
+			&kp B &hl LCTRL C   &hl LALT I  &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp V
+			&kp BSLH &kp G &kp X  	    &kp J   &kp K    &kp MINUS &kp SLASH  &kp R    &kp M  &kp F  &kp P   &kp EQUAL
 			&mqt NUM_L ESC &kp TAB &kp BSPC &kp SPACE &kp RETURN &num_word NUM_L
 			>;
 		};
 	#elif LAYOUT == QWERTY_FLIP
 		qwerty_flip_layer {
 			bindings = <
-			&rpi F1 GRAVE &rpi F2 Q  &rpi F3 W   &rpi F4 D   &rpi F5 F     &rpi F6 G    &rpi F7 Y &rpi F8 J   &rpi F9 K  &rpi F10 L  &rpi F11 SEMI &rpi F12 BSLH
-			&caps_word      &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T       &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
-			&kp MINUS &kp Z          &kp X        &kp C        &kp V          &kp B       &kp N &kp M          &kp COMMA    &kp DOT      &kp SLASH     &kp EQUAL
+			&rpi F1 GRAVE &rpi F2 Q  &rpi F3 W   &rpi F4 D   &rpi F5 F &rpi F6 G    &rpi F7 Y &rpi F8 J   &rpi F9 K  &rpi F10 L  &rpi F11 SEMI &rpi F12 BSLH
+			&caps_word  &hl LCTRL A  &hl LALT S &hl LGUI E &hls LSHFT R &kp T   &kp H &hrs RSHFT U &hr RGUI I &hr RALT O &hr RCTRL P &kp SQT
+			&kp MINUS &kp Z  &kp X    &kp C    &kp V  &kp B   &kp N &kp M  &kp COMMA    &kp DOT  &kp SLASH &kp EQUAL
 			&mqt NUM_L ESC &kp TAB &kp BSPC &kp SPACE &kp RETURN &num_word NUM_L
 			>;
 		};
     #else
 		qwerty_layer {
 			bindings = <
-			&rpi F1 GRAVE &rpi F2 Q       &rpi F3 W    &rpi F4 E       &rpi F5 R        &rpi F6 T &rpi F7 Y &rpi F8 U        &rpi F9 I      &rpi F10 O      &rpi F11 P          &rpi F12 BSLH
-			&caps_word      &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
-			&kp MINUS &kp Z       &kp X      &kp C       &kp V        &kp B &kp N &kp M        &kp COMMA  &kp DOT    &kp SLASH      &kp EQUAL
+			&rpi F1 GRAVE &rpi F2 Q   &rpi F3 W    &rpi F4 E   &rpi F5 R    &rpi F6 T &rpi F7 Y &rpi F8 U    &rpi F9 I  &rpi F10 O  &rpi F11 P  &rpi F12 BSLH
+			&caps_word  &hl LCTRL A &hl LALT S &hl LGUI D  &hls LSHFT F &kp G &kp H &hrs RSHFT J &hr RGUI K &hr RALT L &hr RCTRL SEMI &kp SQT
+			&kp MINUS &kp Z   &kp X  &kp C   &kp V    &kp B &kp N &kp M    &kp COMMA  &kp DOT    &kp SLASH  &kp EQUAL
 			&mqt NUM_L ESC &kp TAB &kp BSPC &kp SPACE &kp RETURN &num_word NUM_L
 			>;
 		};
@@ -71,9 +71,9 @@
 
 		num_layer {
 			bindings = <
-			&kp KP_DIVIDE &kp UNDER   		 &mt KP_N7 N7 &mt KP_N8 N8 &mt KP_N9 N9 &kp KP_MINUS &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE      &none &none
+			&kp KP_DIVIDE &kp UNDER   		 &mt KP_N7 N7 &mt KP_N8 N8 &mt KP_N9 N9 &kp KP_MINUS &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE  &none &none
 			&kp KP_MULTIPLY &mt KP_N0 N0   &mt KP_N4 N4 &mt KP_N5 N5 &mt KP_N6 N6 &kp KP_PLUS &none &kp LSHFT  &kp RGUI  &kp RALT  &kp RCTRL &none
-			&none &mt KP_DOT DOT &mt KP_N1 N1 &mt KP_N2 N2 &mt KP_N3 N3 &kp KP_ENTER &none &bt BT_CLR     &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
+			&none &mt KP_DOT DOT &mt KP_N1 N1 &mt KP_N2 N2 &mt KP_N3 N3 &kp KP_ENTER &none &bt BT_CLR &bt BT_NXT   &out OUT_BLE   &out OUT_USB &none
 			&trans &trans &trans &trans &trans &kp K_CANCEL
 			>;
 		};

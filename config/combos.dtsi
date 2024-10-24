@@ -26,6 +26,7 @@
 	ZMK_COMBO(semi, &kp SEMI, 19 20, 0, 25, RPI)
 	ZMK_COMBO(dot, &kp DOT, 20 21, 0, 25, RPI)
 	ZMK_COMBO(slash, &kp SLASH, 21 22, 0, 25, RPI)
+	ZMK_COMBO(caps_word, &caps_word, LM1 RM1, 0, 25, RPI)
 #endif
 
 // Numbers
