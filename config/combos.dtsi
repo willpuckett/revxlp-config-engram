@@ -29,8 +29,8 @@
 	ZMK_COMBO(letterv, &kp V, RT2 RT3, 0, 25, RPI)
 	ZMK_COMBO(letterz, &kp Z, RB1 RB2, 0, 25, RPI)
 	ZMK_COMBO(letterq, &kp Q, RB3 RB4, 0, 25, RPI)
-	ZMK_COMBO(cclbkt, &mt LBRC LBKT, LM0 MB0, 0, 50, RPI)
-	ZMK_COMBO(ccrbkt, &mt RBRC RBKT, RM0 MB0, ALL, 50, RPI)
+	ZMK_COMBO(cclbkt, &mt LBRC LBKT, LM0 LB0, 0, 50, RPI)
+	ZMK_COMBO(ccrbkt, &mt RBRC RBKT, RM0 RB0, ALL, 50, RPI)
 	
 	// ZMK_COMBO(bl_next, &bt BT_NXT, RT5 RM5 RB5, NUM_L, 50, RPI)
 #endif
