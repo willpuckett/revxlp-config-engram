@@ -11,7 +11,7 @@
 #define QWERTY_FLIP 1
 #define ENGRAM 2
 #define ENGRAMMER 3
-#define NORDRASSIL 3
+#define NORDRASSIL 4
 
 #define NUM_L 1
 
