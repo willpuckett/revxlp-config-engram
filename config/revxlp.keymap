@@ -54,8 +54,8 @@
 		nordrassil_layer {
 			bindings = <
 			&rpi F11 GRAVE &rpi F1 Q &rpi F2 Y   &rpi F3 O   &mt F4 U    &rpi F5 SQT &rpi F6 J  &rpi F7 G    &rpi F8 N  &rpi F9 W  &rpi F10 X &rpi F12 Z 
-			&caps_word &hl LCTRL H   &hl LALT I  &hl LGUI E  &hls LSHFT A &kp SEMI &kp P  &hrs LSHFT D &hr RGUI R &hr RALT S &hr RCTRL L &kp RET
-			&kp BSLH &kp B &kp COMMA  	    &kp SLASH   &kp DOT    &kp MINUS &kp K  &kp C    &kp M  &kp F  &kp V   &kp EQUAL
+			&caps_word &hl LCTRL H   &hl LALT I  &hl LGUI E  &hls LSHFT A &kp DOT &kp P  &hrs LSHFT D &hr RGUI R &hr RALT S &hr RCTRL L &kp RET
+			&kp BSLH &kp B &kp SEMI 	    &kp SLASH   &kp COMMA    &kp MINUS &kp K  &kp C    &kp M  &kp F  &kp V   &kp EQUAL
 			&mqt NUM_L ESC &rpi TAB SPACE &kp BSPC &kp T &kp RET &num_word NUM_L
 			>;
 		};
