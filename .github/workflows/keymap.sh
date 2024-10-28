@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJECT=revxlp
-LAYOUTS=('qwerty' 'qwerty_flip' 'engram' 'engrammer')
+LAYOUTS=('qwerty' 'qwerty_flip' 'engram' 'engrammer', 'nordrassil')
 COLS=8
 KEYMAP="config/${PROJECT}.keymap"
 # See [this link](https://github.com/caksoylar/keymap-drawer/blob/main/KEYMAP_SPEC.md#colsthumbs-notation-specification)

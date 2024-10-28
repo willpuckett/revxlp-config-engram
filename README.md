@@ -73,3 +73,13 @@ These maps were made with the awesome
 ![ENGRAMMER](.images/revxlp_engrammer.svg)
 
 </details>
+
+<summary>
+
+### NORDRASSIL
+
+</summary>
+
+![NORDRASSIL](.images/revxlp_nordrassil.svg)
+
+</details>

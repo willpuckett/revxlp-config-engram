@@ -11,6 +11,7 @@
 #define QWERTY_FLIP 1
 #define ENGRAM 2
 #define ENGRAMMER 3
+#define NORDRASSIL 3
 
 #define NUM_L 1
 
@@ -47,6 +48,15 @@
 			&caps_word &hl LCTRL C   &hl LALT I  &hl LGUI E  &hls LSHFT A &kp COMMA &kp DOT  &hrs LSHFT H &hr RGUI T &hr RALT S &hr RCTRL N &kp Q
 			&kp BSLH &kp G &kp X  	    &kp J   &kp K    &kp MINUS &kp SLASH  &kp R    &kp M  &kp F  &kp P   &kp EQUAL
 			&mqt NUM_L ESC &kp TAB &kp BSPC &kp SPACE &kp RETURN &num_word NUM_L
+			>;
+		};
+	#elif LAYOUT == NORDRASSIL 
+		nordrassil_layer {
+			bindings = <
+			&rpi F11 GRAVE &rpi F1 Q &rpi F2 Y   &rpi F3 O   &mt F4 U    &rpi F5 SQT &rpi F6 J  &rpi F7 G    &rpi F8 N  &rpi F9 W  &rpi F10 X &rpi F12 Z 
+			&caps_word &hl LCTRL H   &hl LALT I  &hl LGUI E  &hls LSHFT A &kp SEMI &kp P  &hrs LSHFT D &hr RGUI R &hr RALT S &hr RCTRL L &kp RET
+			&kp BSLH &kp B &kp COMMA  	    &kp SLASH   &kp DOT    &kp MINUS &kp K  &kp C    &kp M  &kp F  &kp V   &kp EQUAL
+			&mqt NUM_L ESC &rpi TAB SPACE &kp BSPC &kp T &kp RET &num_word NUM_L
 			>;
 		};
 	#elif LAYOUT == QWERTY_FLIP
