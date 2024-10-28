@@ -74,6 +74,8 @@ These maps were made with the awesome
 
 </details>
 
+<details>
+
 <summary>
 
 ### NORDRASSIL
