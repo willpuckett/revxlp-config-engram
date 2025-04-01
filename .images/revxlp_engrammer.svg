@@ -67,8 +67,8 @@ text.footer {
     paint-order: stroke;
 }
 
-/* styling for combo tap, and key hold/shifted label text */
-text.combo, text.hold, text.shifted {
+/* styling for combo tap, and key non-tap label text */
+text.combo, text.hold, text.shifted, text.left, text.right {
     font-size: 11px;
 }
 
@@ -82,12 +82,20 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.left {
+    text-anchor: start;
+}
+
+text.right {
+    text-anchor: end;
+}
+
 text.layer-activator {
     text-decoration: underline;
 }
 
 /* styling for hold/shifted label text in combo box */
-text.combo.hold, text.combo.shifted {
+text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
     font-size: 8px;
 }
 
@@ -446,32 +454,24 @@ path.combo {
 <g class="combo combopos-27">
 <rect rx="6" ry="6" x="14" y="120" width="28" height="26" class="combo"/>
 <text x="28" y="133" class="combo tap">
-<tspan x="28" dy="-0.6em" style="font-size: 88%">Sft+Gui+</tspan><tspan x="28" dy="1.2em" style="font-size: 88%">Z</tspan>
+<tspan x="28" dy="-0.6em">Sft+Gui</tspan><tspan x="28" dy="1.2em">+Z</tspan>
 </text>
 </g>
 <g class="combo combopos-28">
 <rect rx="6" ry="6" x="70" y="120" width="28" height="26" class="combo"/>
-<text x="84" y="133" class="combo tap">
-<tspan x="84" dy="-0.6em">Gui+</tspan><tspan x="84" dy="1.2em">Z</tspan>
-</text>
+<text x="84" y="133" class="combo tap">Gui+Z</text>
 </g>
 <g class="combo combopos-29">
 <rect rx="6" ry="6" x="126" y="106" width="28" height="26" class="combo"/>
-<text x="140" y="119" class="combo tap">
-<tspan x="140" dy="-0.6em">Gui+</tspan><tspan x="140" dy="1.2em">X</tspan>
-</text>
+<text x="140" y="119" class="combo tap">Gui+X</text>
 </g>
 <g class="combo combopos-30">
 <rect rx="6" ry="6" x="182" y="99" width="28" height="26" class="combo"/>
-<text x="196" y="112" class="combo tap">
-<tspan x="196" dy="-0.6em">Gui+</tspan><tspan x="196" dy="1.2em">C</tspan>
-</text>
+<text x="196" y="112" class="combo tap">Gui+C</text>
 </g>
 <g class="combo combopos-31">
 <rect rx="6" ry="6" x="238" y="106" width="28" height="26" class="combo"/>
-<text x="252" y="119" class="combo tap">
-<tspan x="252" dy="-0.6em">Gui+</tspan><tspan x="252" dy="1.2em">V</tspan>
-</text>
+<text x="252" y="119" class="combo tap">Gui+V</text>
 </g>
 <g class="combo combopos-32">
 <rect rx="6" ry="6" x="574" y="106" width="28" height="26" class="combo"/>
@@ -754,32 +754,24 @@ path.combo {
 <g class="combo combopos-14">
 <rect rx="6" ry="6" x="14" y="120" width="28" height="26" class="combo"/>
 <text x="28" y="133" class="combo tap">
-<tspan x="28" dy="-0.6em" style="font-size: 88%">Sft+Gui+</tspan><tspan x="28" dy="1.2em" style="font-size: 88%">Z</tspan>
+<tspan x="28" dy="-0.6em">Sft+Gui</tspan><tspan x="28" dy="1.2em">+Z</tspan>
 </text>
 </g>
 <g class="combo combopos-15">
 <rect rx="6" ry="6" x="70" y="120" width="28" height="26" class="combo"/>
-<text x="84" y="133" class="combo tap">
-<tspan x="84" dy="-0.6em">Gui+</tspan><tspan x="84" dy="1.2em">Z</tspan>
-</text>
+<text x="84" y="133" class="combo tap">Gui+Z</text>
 </g>
 <g class="combo combopos-16">
 <rect rx="6" ry="6" x="126" y="106" width="28" height="26" class="combo"/>
-<text x="140" y="119" class="combo tap">
-<tspan x="140" dy="-0.6em">Gui+</tspan><tspan x="140" dy="1.2em">X</tspan>
-</text>
+<text x="140" y="119" class="combo tap">Gui+X</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="182" y="99" width="28" height="26" class="combo"/>
-<text x="196" y="112" class="combo tap">
-<tspan x="196" dy="-0.6em">Gui+</tspan><tspan x="196" dy="1.2em">C</tspan>
-</text>
+<text x="196" y="112" class="combo tap">Gui+C</text>
 </g>
 <g class="combo combopos-18">
 <rect rx="6" ry="6" x="238" y="106" width="28" height="26" class="combo"/>
-<text x="252" y="119" class="combo tap">
-<tspan x="252" dy="-0.6em">Gui+</tspan><tspan x="252" dy="1.2em">V</tspan>
-</text>
+<text x="252" y="119" class="combo tap">Gui+V</text>
 </g>
 <g class="combo combopos-19">
 <rect rx="6" ry="6" x="574" y="106" width="28" height="26" class="combo"/>
